@@ -3,6 +3,7 @@ const songs = [
         id: 1,
         title: 'Queen of My Heart',
         singer: 'Westlife',
+        style: 'folk',
         lyrics: 
             `So here we stand in our secret place
             Where the sound of the crowd is so far away
@@ -31,6 +32,7 @@ const songs = [
         id: 2,
         title: 'Jerusalema',
         singer: 'Master KG',
+        style: 'Salegy',
         lyrics: `
             O wanitwa mos, O wanitwa mos
             Master Master KG
@@ -68,6 +70,7 @@ const songs = [
         id: 3,
         title: 'Take Me Home, Country Roads',
         singer: 'John Denver',
+        style: 'Country',
         lyrics: 
         ` 
         Almost heaven, West Virginia
@@ -101,6 +104,7 @@ const songs = [
         id: 4,
         title: 'Aza Itserana',
         singer: 'Mage4',
+        style: 'Rock',
         lyrics: `
         Tonga teto ianao
         Nilaza fa nahita ilay fitia

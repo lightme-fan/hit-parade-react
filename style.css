@@ -1,0 +1,118 @@
+body {
+    background-color: #fffffe;
+    color: #2b2c34;
+}
+
+/* Article */
+.container {
+    max-width: 660px;
+    margin: auto;
+    padding: 3rem;
+}
+
+/* header {
+    color: #fffffe;
+} */
+
+ul {
+    padding: 0;
+    list-style: none;  
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list > li > a {
+    text-decoration: none;
+    color: #2b2c34;
+}
+
+.song {
+    margin-top: 2rem;
+}
+
+.song--detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: #d1d1e9;
+    color: #475d5b;
+}
+
+.song--detail > h3 {
+    margin: 0;
+}
+
+.song--detail > h3 > span {
+    font-size: 8px;
+}
+
+.song--detail > i,
+.song--detail > div,
+.song--detail > .more {
+    align-self: center;
+    cursor: pointer;
+}
+
+/* Song Styles */
+.song--style {
+    padding: 1rem;
+    padding-left: 4rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-image: url('./svg/headphones.svg');
+    background-repeat: no-repeat;
+    background-position: 9%;
+    background-size: 28%;
+    margin-top: 10px;
+}
+
+.lyrics-card {
+    margin-top: 3rem;
+}
+
+.lyrics-card > h2 {
+    /* color: #fffffe; */
+}
+
+.lyrics {
+    background-color: #f2f7f5;
+    margin-right: 20%;
+    padding: 1rem;
+}
+
+/* Add song */
+.add--song {
+    display: grid;
+    grid-template-columns: 1fr 20%;
+}
+
+.add--form {
+    color: #fffffe;
+    margin-right: 30%;
+}
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.fieldset > input,
+.fieldset > textarea {
+    margin-top: 2rem;
+    padding: 4%;
+    padding-right: 0;
+    width: 100%;
+}
+
+.fieldset > button {
+    max-width: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 2rem;
+}

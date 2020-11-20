@@ -33864,21 +33864,25 @@ var songs = [{
   id: 1,
   title: 'Queen of My Heart',
   singer: 'Westlife',
+  style: 'folk',
   lyrics: "So here we stand in our secret place\n            Where the sound of the crowd is so far away\n            You take my hand, and it fees like home\n            We both understand, it where we belong\n\n            So do I say, do I say goodbye\n            We both have our dreams we both want to fly\n            So lets take tonight, to carry us through the lonely times\n            I'll always look back as I walk away\n\n            Memories will last for eternity\n            And all of our tears will be lost in the rain\n            When I found my way back to your arms again\n            But until that day, you know you are\n\n            The Queen of my heart\n            So lets take tonight, and never let go\n            While we dance we kiss, like there's no tomorrow\n            As the stars sparkle down, like a diamond ring\n            I'll treasure this moment, till we meet again\n            But no matter how far, away you may be\n            I'll just close my eyes, and your in\u2026"
 }, {
   id: 2,
   title: 'Jerusalema',
   singer: 'Master KG',
+  style: 'Salegy',
   lyrics: "\n            O wanitwa mos, O wanitwa mos\n            Master Master KG\n            O wanitwa mos\n\n            Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana\n\n            Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana\n\n            Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami\n\n            Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami\n\n            Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi lana\n\n            Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi\u2026            \n        "
 }, {
   id: 3,
   title: 'Take Me Home, Country Roads',
   singer: 'John Denver',
+  style: 'Country',
   lyrics: " \n        Almost heaven, West Virginia\n        Blue Ridge Mountains, Shenandoah River\n        Life is old there, older than the trees\n        Younger than the mountains, growin' like a breeze\n\n        Country roads, take me home\n        To the place I belong\n        West Virginia, mountain mama\n        Take me home, country roads\n\n        All my memories gather 'round her\n        Miner's lady, stranger to blue water\n        Dark and dusty, painted on the sky\n        Misty taste of moonshine, teardrop in my eye\n\n        Country roads, take me home\n        To the place I belong\n        West Virginia, mountain mama\n        Take me home, country roads\n\n        I hear her voice in the mornin' hour, she calls me\n        The radio reminds me of my home far away\n        Drivin' down the road, I get a feelin'\n        That I should've been home\u2026\n        "
 }, {
   id: 4,
   title: 'Aza Itserana',
   singer: 'Mage4',
+  style: 'Rock',
   lyrics: "\n        Tonga teto ianao\n        Nilaza fa nahita ilay fitia\n        Lay nirianao hatrizay ka hatrizao\n        Mba faly anie aho\n        F'angamba ho sambatra @zay ianao\n        F'ilay fitia teto amiko angamba tsy ampy\n        \n        Ny alahelo tanatiko tao\n        Nafeniko tsy ho hitanao\n        Noeferiko ilay hany hasambarako\n        \n        Fa raha sendra\n        Mandalo mamangy any aho\n        Ka maso manganohano no hitanao\n        Raha mijery anao aho tsy sahy\n        Ka tsapanao fa toa mafy izany adimpanahy\n        Aza itserana akory aho\n        Efa sambatra ianao\n        Ampy izay\n        \n        Niala teto ianao\n        Fo mangaina sisa navelanao mba ho ahy\n        Fa tsy ho ahy ianao fa hiova fitia vaovao\n        \n        Ny alahelo..............\n        "
 }];
 var _default = songs;
@@ -33902,6 +33906,20 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -33919,18 +33937,97 @@ var Context = _react.default.createContext();
 exports.Context = Context;
 
 function ContextProvider(_ref) {
-  var Children = _ref.Children;
+  var children = _ref.children;
 
-  var _useState = (0, _react.useState)(),
+  var _useState = (0, _react.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       allSongs = _useState2[0],
       setSongs = _useState2[1];
 
+  var _useState3 = (0, _react.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      cartSong = _useState4[0],
+      setCart = _useState4[1];
+
+  var _useState5 = (0, _react.useState)(0),
+      _useState6 = _slicedToArray(_useState5, 2),
+      upvote = _useState6[0],
+      setUpvote = _useState6[1];
+
+  var _useState7 = (0, _react.useState)(0),
+      _useState8 = _slicedToArray(_useState7, 2),
+      downvote = _useState8[0],
+      setDownvote = _useState8[1];
+
+  (0, _react.useEffect)(function () {
+    setSongs(_songs.default);
+  }, []);
+
+  var handleFavoriteSong = function handleFavoriteSong(id) {
+    console.log(id);
+    var newSong = allSongs.map(function (song) {
+      if (song.id === id) {
+        return _objectSpread(_objectSpread({}, song), {}, {
+          isLiked: !song.isLiked
+        });
+      }
+
+      return song;
+    });
+    setSongs(newSong);
+  };
+
+  var addToCart = function addToCart(song) {
+    setCart(function (prevCart) {
+      return [].concat(_toConsumableArray(prevCart), [song]);
+    });
+  };
+
+  var removeFromCart = function removeFromCart(id) {
+    setCart(function (prevItem) {
+      return prevItem.filter(function (item) {
+        return item.id !== id;
+      });
+    });
+  }; // Up and Down votes
+
+
+  var clickUpvote = function clickUpvote(id) {
+    // const foundSong = allSongs.filter(song => {
+    //     if(song.id !== id) {
+    //     }
+    // })
+    // return foundSong
+    setUpvote(function (prevVote) {
+      return prevVote + 1;
+    });
+  };
+
+  var clickDownVote = function clickDownVote(id) {
+    var findSong = allSongs.some(function (song) {
+      return song.id !== id;
+    });
+
+    if (findSong) {
+      setDownvote(function (prevVote) {
+        return prevVote - 1;
+      });
+    }
+  };
+
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
-      allSongs: allSongs
+      allSongs: allSongs,
+      handleFavoriteSong: handleFavoriteSong,
+      cartSong: cartSong,
+      addToCart: addToCart,
+      removeFromCart: removeFromCart,
+      upvote: upvote,
+      downvote: downvote,
+      clickUpvote: clickUpvote,
+      clickDownVote: clickDownVote
     }
-  }, Children);
+  }, children);
 }
 },{"react":"node_modules/react/index.js","./songs":"songs.js"}],"components/Header.js":[function(require,module,exports) {
 "use strict";
@@ -33947,7 +34044,11 @@ var _reactRouterDom = require("react-router-dom");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Header() {
-  return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  return /*#__PURE__*/_react.default.createElement("header", {
+    className: "header"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
+    className: "list"
+  }, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, "Popular Songs")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/styles"
@@ -33960,7 +34061,7 @@ function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"pages/PopularSongs.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"components/Song.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33968,17 +34069,160 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _ContextProvider = require("../ContextProvider");
+
+var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function Song(_ref) {
+  var song = _ref.song;
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isLiked = _useState2[0],
+      setLike = _useState2[1];
+
+  var _useContext = (0, _react.useContext)(_ContextProvider.Context),
+      handleFavoriteSong = _useContext.handleFavoriteSong,
+      cartSong = _useContext.cartSong,
+      addToCart = _useContext.addToCart,
+      removeFromCart = _useContext.removeFromCart,
+      upvote = _useContext.upvote,
+      downvote = _useContext.downvote,
+      clickUpvote = _useContext.clickUpvote,
+      clickDownVote = _useContext.clickDownVote,
+      lyrics = _useContext.lyrics,
+      songLyrics = _useContext.songLyrics;
+
+  var toggleLikedSong = function toggleLikedSong() {
+    if (song.isLiked) {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        onClick: function onClick() {
+          return handleFavoriteSong(song.id);
+        }
+      }, "\uD83D\uDC93");
+    } else {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        onClick: function onClick() {
+          return handleFavoriteSong(song.id);
+        },
+        className: "ri-heart-line favorite"
+      });
+    }
+  };
+
+  var cartIcon = function cartIcon() {
+    var inCart = cartSong.some(function (item) {
+      return item.id === song.id;
+    });
+    console.log(inCart);
+
+    if (inCart) {
+      return /*#__PURE__*/_react.default.createElement("i", {
+        onClick: function onClick() {
+          return removeFromCart(song.id);
+        },
+        className: "ri-shopping-cart-fill ri-fw ri-1x"
+      });
+    } else {
+      return /*#__PURE__*/_react.default.createElement("i", {
+        onClick: function onClick() {
+          return addToCart(song);
+        },
+        className: "ri-shopping-cart-line ri-fw ri-1x"
+      });
+    }
+  };
+
+  return /*#__PURE__*/_react.default.createElement("li", {
+    className: "song--detail"
+  }, toggleLikedSong(), /*#__PURE__*/_react.default.createElement("h3", null, song.title, /*#__PURE__*/_react.default.createElement("br", null), " ", /*#__PURE__*/_react.default.createElement("small", null, song.singer)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("span", {
+    className: "count",
+    onClick: function onClick() {
+      return clickUpvote(song.id);
+    }
+  }, "\u2191"), "  ", /*#__PURE__*/_react.default.createElement("span", null, upvote)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("span", {
+    className: "count",
+    onClick: function onClick() {
+      return clickDownVote(song.id);
+    }
+  }, "\u2193"), "  ", /*#__PURE__*/_react.default.createElement("span", null, downvote)), cartIcon(), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/lyrics"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "more"
+  }, "...")));
+}
+
+Song.propTypes = {
+  songs: _propTypes.default.shape({
+    id: _propTypes.default.string.isRequired,
+    title: _propTypes.default.string.isRequired,
+    singer: _propTypes.default.string,
+    lyrics: _propTypes.default.string
+  })
+};
+var _default = Song;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","../ContextProvider":"ContextProvider.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"pages/PopularSongs.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _Song = _interopRequireDefault(require("../components/Song"));
+
+var _ContextProvider = require("../ContextProvider");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function PopularSongs() {
-  return /*#__PURE__*/_react.default.createElement("h3", null, "Popular songs");
+  var _useContext = (0, _react.useContext)(_ContextProvider.Context),
+      allSongs = _useContext.allSongs;
+
+  var mapped = allSongs.map(function (song) {
+    return /*#__PURE__*/_react.default.createElement(_Song.default, {
+      key: song.id,
+      song: song
+    });
+  });
+  console.log(mapped);
+  return /*#__PURE__*/_react.default.createElement("ul", {
+    className: "song"
+  }, mapped);
 }
 
 var _default = PopularSongs;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"pages/Styles.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components/Song":"components/Song.js","../ContextProvider":"ContextProvider.js"}],"pages/Styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33991,7 +34235,23 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Styles() {
-  return /*#__PURE__*/_react.default.createElement("h3", null, "Styles");
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "song--style-btn"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "song--style"
+  }, "Country"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("button", {
+    className: "song--style"
+  }, "Folk"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("button", {
+    className: "song--style"
+  }, "Rock"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("button", {
+    className: "song--style"
+  }, "Reggea"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("button", {
+    className: "song--style"
+  }, "Rap"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("button", {
+    className: "song--style"
+  }, "Salegy"), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("button", {
+    className: "song--style"
+  }, "Kawitry"), /*#__PURE__*/_react.default.createElement("br", null));
 }
 
 var _default = Styles;
@@ -34009,7 +34269,30 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Add() {
-  return /*#__PURE__*/_react.default.createElement("h3", null, "Add");
+  return /*#__PURE__*/_react.default.createElement("form", {
+    className: "add--form"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "Add a new Song"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "add--song"
+  }, /*#__PURE__*/_react.default.createElement("fieldset", {
+    className: "fieldset"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    name: "title",
+    placeholder: "Title"
+  }), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    name: "artist",
+    placeholder: "Artist"
+  }), /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    name: "price",
+    placeholder: "Price"
+  }), /*#__PURE__*/_react.default.createElement("textarea", {
+    type: "text",
+    row: "5",
+    name: "lyrics",
+    placeholder: "Lyrics"
+  }), /*#__PURE__*/_react.default.createElement("button", null, "Add"))));
 }
 
 var _default = Add;
@@ -34032,7 +34315,61 @@ function Cart() {
 
 var _default = Cart;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"pages/Lyrics.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _ContextProvider = require("../ContextProvider");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function Lyrics(song) {
+  var _useState = (0, _react.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      songlyrics = _useState2[0],
+      setLyrics = _useState2[1];
+
+  var _useContext = (0, _react.useContext)(_ContextProvider.Context),
+      allSongs = _useContext.allSongs;
+
+  var showLyrics = allSongs.filter(function (item) {
+    return item.id;
+  });
+  console.log(showLyrics.find(function (item) {
+    return item.id !== song.id;
+  }));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "lyrics-card"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "\u2190"))));
+}
+
+var _default = Lyrics;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../ContextProvider":"ContextProvider.js"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34054,10 +34391,14 @@ var _Add = _interopRequireDefault(require("../pages/Add"));
 
 var _Cart = _interopRequireDefault(require("../pages/Cart"));
 
+var _Lyrics = _interopRequireDefault(require("../pages/Lyrics"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("article", null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  return /*#__PURE__*/_react.default.createElement("article", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"
   }, /*#__PURE__*/_react.default.createElement(_PopularSongs.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
@@ -34066,12 +34407,14 @@ function App() {
     path: "/add"
   }, /*#__PURE__*/_react.default.createElement(_Add.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/cart"
-  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null))));
+  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/lyrics"
+  }, /*#__PURE__*/_react.default.createElement(_Lyrics.default, null))));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Header":"components/Header.js","../pages/PopularSongs":"pages/PopularSongs.js","../pages/Styles":"pages/Styles.js","../pages/Add":"pages/Add.js","../pages/Cart":"pages/Cart.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Header":"components/Header.js","../pages/PopularSongs":"pages/PopularSongs.js","../pages/Styles":"pages/Styles.js","../pages/Add":"pages/Add.js","../pages/Cart":"pages/Cart.js","../pages/Lyrics":"pages/Lyrics.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -34115,7 +34458,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50984" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58035" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

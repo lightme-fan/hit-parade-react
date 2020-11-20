@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 function Header() {
     return (
-        <header>
+        <header className='header'>
             <h1>Hit Parade</h1>
             <nav>
-                <ul>
+                <ul className='list'>
                     <li><Link to='/'>Popular Songs</Link></li>
                     <li><Link to='/styles'>Styles</Link></li>
                     <li><Link to='/add'>Add</Link></li>
