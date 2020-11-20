@@ -1,23 +1,21 @@
 import React, { useState, useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Context } from '../ContextProvider'
 
 function Lyrics(song) {
-    const [ songlyrics, setLyrics ] = useState([])
-    const {allSongs} = useContext(Context)
-    
-    const showLyrics = allSongs.filter(item => item.id);
-    console.log(showLyrics.find(item => item.id !== song.id));
-    
+    const {allSongs, showLyrics} = useContext(Context)
+    const { id } = useParams()
+    const newSong = allSongs.filter(i => i.id === song.id)
+    console.log(newSong);
     return (
         <>  
-            {/* {lyrics &&  */}
+            {newSong.map(song => 
                 <div className='lyrics-card'>
                     <Link to='/'><span>←</span></Link>
-                    {/* <h2>{showLyrics.title}: <span>{showLyrics.singer}</span></h2>
-                    <p className='lyrics'>{showLyrics.lyrics}</p> */}
+                    <h2>{song.title}: <span>{song.singer}</span></h2>
+                    <p className='lyrics'>{song.lyrics}</p>
                 </div>
-            {/* } */}
+            )}
         </>
     )
 }

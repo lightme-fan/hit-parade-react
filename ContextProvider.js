@@ -6,15 +6,13 @@ const Context = React.createContext()
 function ContextProvider({children}) {
     const [ allSongs, setSongs ] = useState([])
     const [ cartSong, setCart ] = useState([])
-    const [ upvote, setUpvote ] = useState(0)
-    const [ downvote, setDownvote ] = useState(0)
-
+    
     useEffect(() => {
         setSongs(songs)
     }, [])
 
+    // Handle Fanvorite
     const handleFavoriteSong = (id) => {
-        console.log(id);
         const newSong = allSongs.map(song => {
             if (song.id === id) {
                 return {
@@ -27,6 +25,7 @@ function ContextProvider({children}) {
         setSongs(newSong)
     }
 
+    // Handle Cart
     const addToCart = (song) => {
         setCart(prevCart => [...prevCart, song])
     }
@@ -37,32 +36,60 @@ function ContextProvider({children}) {
 
     // Up and Down votes
     const clickUpvote = (id) => {
-        // const foundSong = allSongs.filter(song => {
-        //     if(song.id !== id) {
-
-        //     }
-        // })
-        // return foundSong
-        setUpvote(prevVote => prevVote + 1)
+        const foundSong = allSongs.map(song => {
+            if(song.id === id) {
+                return {
+                    ...song,
+                    upvote: song.upvote + 1
+                }
+            }
+            return song
+        })
+        setSongs(foundSong)
     }
 
     const clickDownVote = (id) => {
-        const findSong = allSongs.some(song => song.id !== id)
-        if (findSong) {
-            setDownvote(prevVote => prevVote - 1)
-        }
+        const foundSong = allSongs.map(song => {
+            if(song.id === id) {
+                return {
+                    ...song,
+                    downvote: song.downvote - 1
+                }
+            }
+            return song
+        })
+        setSongs(foundSong)
+    }
+
+    // handling Lyrcs
+    const showLyrics = (id) => {
+        const findSong = allSongs.filter(item => item.id === id)
+        console.log(findSong);
+    }
+
+    // handling Lyrcs
+    const songStyle = (id) => {
+        const findSong = allSongs.map(item => {
+            if (item.id !== id) {
+                console.log(id);
+                console.log(item.id);
+            }
+            return item
+        })
+        console.log(findSong);
     }
 
     return (
         <Context.Provider value={{allSongs, 
             handleFavoriteSong, 
             cartSong, 
+            setCart,
             addToCart, 
-            removeFromCart,
-            upvote,
-            downvote,           
+            removeFromCart,           
             clickUpvote,
             clickDownVote,
+            showLyrics,
+            songStyle,
         }}>
             {children}
         </Context.Provider>

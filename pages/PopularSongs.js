@@ -5,11 +5,16 @@ import {Context} from '../ContextProvider'
 function PopularSongs() {
     const { allSongs } = useContext(Context)
     
-    const mapped = allSongs.map(song => 
-        <Song key={song.id} song={song} />
+    const mapped = allSongs
+    .sort((a,b) => {
+        const sortUpvotes = a.upvote - b.upvote
+        const sortDownvotes = a.downvote - b.downvote
+        return sortDownvotes - sortUpvotes
+    })
+    .map(song => 
+        <Song key={song.title} song={song} />
     )
 
-    console.log(mapped);
     return (
         <ul className='song'>
             {mapped}

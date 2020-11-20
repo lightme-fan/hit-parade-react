@@ -6,6 +6,7 @@ import Styles from '../pages/Styles'
 import Add from '../pages/Add'
 import Cart from '../pages/Cart'
 import Lyrics from '../pages/Lyrics'
+import SongStyle from './SongStyle'
 
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
             <Header/>
             <Switch>
                 <Route exact path='/'><PopularSongs/></Route>
-                <Route path='/styles'><Styles/></Route>
+                <Route path='/lyrics'><Lyrics/></Route>
+                <Route exact path='/styles'><Styles/></Route>
+                <Route path='/styles/:style'><SongStyle/></Route>
                 <Route path='/add'><Add/></Route>
                 <Route path='/cart'><Cart/></Route>
-                <Route path='/lyrics'><Lyrics/></Route>
             </Switch>
         </article>
     )

@@ -4,18 +4,16 @@ import { Context } from '../ContextProvider'
 import { Link } from 'react-router-dom'
 
 function Song({song}) {
-    const [ isLiked, setLike ] = useState(false)
+    const [ isLiked, setLike ] = useState(false)    
     const {
+        allSongs,
         handleFavoriteSong, 
         cartSong, 
         addToCart, 
         removeFromCart,
-        upvote,
-        downvote,
         clickUpvote,
         clickDownVote,
-        lyrics,
-        songLyrics
+        showLyrics,
     } = useContext(Context)
 
     const toggleLikedSong = () => {
@@ -28,7 +26,6 @@ function Song({song}) {
 
     const cartIcon = () => {
         const inCart = cartSong.some(item => item.id === song.id)
-        console.log(inCart);
         if (inCart) {
             return <i onClick={() => removeFromCart(song.id)} className="ri-shopping-cart-fill ri-fw ri-1x"></i>
         } else {
@@ -40,10 +37,10 @@ function Song({song}) {
         <li className='song--detail'>
             {toggleLikedSong()}
             <h3>{song.title}<br/> <small>{song.singer}</small></h3>
-            <div><span className='count' onClick={() => clickUpvote(song.id)}>↑</span>  <span>{upvote}</span></div>
-            <div><span className='count' onClick={() => clickDownVote(song.id)}>↓</span>  <span>{downvote}</span></div>
+            <div><span className='count' onClick={() => clickUpvote(song.id)}>↑</span>  <span>{song.upvote}</span></div>
+            <div><span className='count' onClick={() => clickDownVote(song.id)}>↓</span>  <span>{song.downvote}</span></div>
             {cartIcon()}
-            <Link to='/lyrics'><button className='more'>...</button></Link>
+            <Link to={`/${song.id}`}><button className='more'>...</button></Link>
         </li>
     )
 }

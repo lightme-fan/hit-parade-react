@@ -3,6 +3,8 @@ const songs = [
         id: 1,
         title: 'Queen of My Heart',
         singer: 'Westlife',
+        upvote: 10,
+        downvote: 7,
         style: 'folk',
         lyrics: 
             `So here we stand in our secret place
@@ -32,6 +34,8 @@ const songs = [
         id: 2,
         title: 'Jerusalema',
         singer: 'Master KG',
+        upvote: 100,
+        downvote: 20,
         style: 'Salegy',
         lyrics: `
             O wanitwa mos, O wanitwa mos
@@ -70,6 +74,8 @@ const songs = [
         id: 3,
         title: 'Take Me Home, Country Roads',
         singer: 'John Denver',
+        upvote: 20,
+        downvote: 2,
         style: 'Country',
         lyrics: 
         ` 
@@ -104,6 +110,8 @@ const songs = [
         id: 4,
         title: 'Aza Itserana',
         singer: 'Mage4',
+        upvote: 1000,
+        downvote: 30,
         style: 'Rock',
         lyrics: `
         Tonga teto ianao

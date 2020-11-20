@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import {Link} from 'react-router-dom'
+import { Context } from '../ContextProvider'
 
 function Styles() {
+    const {allSongs, songStyle} = useContext(Context)
     return (
-        <div className='song--style-btn'>
-            <button className='song--style'>Country</button><br/>
-            <button className='song--style'>Folk</button><br/>
-            <button className='song--style'>Rock</button><br/>
-            <button className='song--style'>Reggea</button><br/>
-            <button className='song--style'>Rap</button><br/>
-            <button className='song--style'>Salegy</button><br/>
-            <button className='song--style'>Kawitry</button><br/>
-        </div>
+        <>
+            {allSongs.map(song =>
+                <div className='song--style-btn'  key={song.id}>
+                    <Link to={`/styles/${song.style}`}><button className='song--style'>{song.style}</button><br/></Link>
+                </div>
+            )}
+        </>
     )
 }
 
