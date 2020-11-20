@@ -2,9 +2,11 @@ import React, { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Context } from '../ContextProvider'
 import { Link } from 'react-router-dom'
+import dots from '../svg/dots.svg'
 
 function Song({song}) {
-    const [ isLiked, setLike ] = useState(false)    
+    const [ isLiked, setLike ] = useState(false) 
+    const [ isHovered, setHover ] = useState(false)   
     const {
         allSongs,
         handleFavoriteSong, 
@@ -15,6 +17,14 @@ function Song({song}) {
         clickDownVote,
         showLyrics,
     } = useContext(Context)
+
+    const handleMouseEnter = () => {
+        setHover(true)
+    }
+
+    const handleMouseLeave = () => {
+        setHover(false)
+    }
 
     const toggleLikedSong = () => {
         if (song.isLiked) {
@@ -35,12 +45,17 @@ function Song({song}) {
 
     return (
         <li className='song--detail'>
-            {toggleLikedSong()}
+            <div 
+                onMouseEnter = { handleMouseEnter }
+                onMouseLeave = { handleMouseLeave }
+            >
+                {toggleLikedSong()}
+            </div>
             <h3>{song.title}<br/> <small>{song.singer}</small></h3>
             <div><span className='count' onClick={() => clickUpvote(song.id)}>↑</span>  <span>{song.upvote}</span></div>
             <div><span className='count' onClick={() => clickDownVote(song.id)}>↓</span>  <span>{song.downvote}</span></div>
             {cartIcon()}
-            <Link to={`/${song.id}`}><button className='more'>...</button></Link>
+            <Link to={`/song/${song.id}`}>●●●</Link>
         </li>
     )
 }

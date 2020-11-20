@@ -15,7 +15,7 @@ function App() {
             <Header/>
             <Switch>
                 <Route exact path='/'><PopularSongs/></Route>
-                <Route path='/lyrics'><Lyrics/></Route>
+                <Route path='/song/:id'><Lyrics/></Route>
                 <Route exact path='/styles'><Styles/></Route>
                 <Route path='/styles/:style'><SongStyle/></Route>
                 <Route path='/add'><Add/></Route>

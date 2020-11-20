@@ -5,9 +5,16 @@ body {
 
 /* Article */
 .container {
-    max-width: 660px;
+    max-width: 900px;
     margin: auto;
     padding: 3rem;
+}
+
+.header > h1 {
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 88px;
+    margin: 0;
 }
 
 ul {
@@ -23,8 +30,24 @@ ul {
 .list > li > a {
     text-decoration: none;
     color: #2b2c34;
+    font-size: 26px;
+    font-weight: 700;
 }
 
+.list > li > a > img {
+    width: 30px;
+}
+
+.list > li > a:active {
+    color: blue;
+}
+
+.list > li > a:focus {
+    color:blue;
+    outline: none;
+}
+
+/*  */
 .song {
     margin-top: 2rem;
 }
@@ -40,10 +63,25 @@ ul {
 
 .song--detail > h3 {
     margin: 0;
+    font-size: 36px;
+    font-weight: 400;
 }
 
-.song--detail > h3 > span {
-    font-size: 8px;
+.song--detail > h3 > small {
+    font-size: 18px;
+    line-height: 22px;
+    opacity: 0.6;
+}
+
+.song--detail > a {
+    align-self: center;
+    text-decoration: none;
+    color: #fffffe;
+}
+
+.song--detail > div > .count {
+    color: blue;
+    padding-right: 1rem;
 }
 
 .song--detail > i,
@@ -56,7 +94,7 @@ ul {
 /* Song Styles */
 .song--style {
     padding: 1rem;
-    padding-left: 4rem;
+    padding-left: 7rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -65,6 +103,8 @@ ul {
     background-position: 9%;
     background-size: 28%;
     margin-top: 10px;
+    font-size: 40px;
+    line-height: 78px;
 }
 
 .card--style {
@@ -73,17 +113,25 @@ ul {
     padding: 1rem;
 }
 
-.style-heading {
-    padding-left: 4rem;
+.card--style > h4 {
+    font-size: 2rem;
+    margin: 0;
+}
+.styles > .style-heading {
+    padding-left: 6rem;
     background-image: url('/headphones.cbde56e7.svg');
     background-repeat: no-repeat;
     background-position: 0%;
-    background-size: 8%; 
-    font-size: 3rem;
+    background-size: 7%; 
+    font-size: 4rem;
 }
 
 .lyrics-card {
     margin-top: 3rem;
+}
+
+.song--style-btn > button {
+
 }
 
 /* .lyrics-card > h2 {
@@ -96,10 +144,13 @@ ul {
     padding: 1rem;
 }
 
+.lyrics > span {
+    margin-bottom: 2rem;
+}
+
 /* Add song */
 .add--song {
     display: grid;
-    grid-template-columns: 1fr 20%;
 }
 
 .add--form {
@@ -107,26 +158,42 @@ ul {
     margin-right: 30%;
 }
 
+.add--form > h2 {
+    color: #0f0e17;
+    text-align: center;
+    margin: 0;
+    margin-top: 4rem;
+    font-size: 34px;
+}
+
 .fieldset {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 2rem;
+    width: 100%;
+    border: none;
 }
 
 .fieldset > input,
-.fieldset > textarea {
+.fieldset > textarea  {
     margin-top: 2rem;
     padding: 4%;
     padding-right: 0;
     width: 100%;
+    background: #BAE8E8;
+}
+
+.fieldset > select {
+    width: 105%;
+    padding: 4%;
+    margin-top: 2rem;
+    background: #BAE8E8;
 }
 
 .fieldset > button {
     max-width: 50%;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 40px;
     margin-top: 2rem;
+    background: #FFD803;
 }
 
 .cart--card {

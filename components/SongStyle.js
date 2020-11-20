@@ -7,7 +7,7 @@ function SongStyle() {
     const {allSongs, songStyle} = useContext(Context)
     const { style } = useParams()
     const newSong = allSongs.filter(song => song.style === style)
-
+    console.log(newSong);
     return (
         <>
             <div className='styles'>
