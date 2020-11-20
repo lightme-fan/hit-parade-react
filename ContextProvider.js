@@ -80,7 +80,9 @@ function ContextProvider({children}) {
     }
 
     return (
-        <Context.Provider value={{allSongs, 
+        <Context.Provider value={{
+            allSongs,
+            setSongs, 
             handleFavoriteSong, 
             cartSong, 
             setCart,

@@ -1,6 +1,6 @@
 body {
     background-color: #fffffe;
-    color: #2b2c34;
+    color: #0f0e17;
 }
 
 /* Article */
@@ -10,14 +10,11 @@ body {
     padding: 3rem;
 }
 
-/* header {
-    color: #fffffe;
-} */
-
 ul {
     padding: 0;
     list-style: none;  
 }
+
 .list {
     display: flex;
     justify-content: space-between;
@@ -37,8 +34,8 @@ ul {
     justify-content: space-between;
     padding: 2rem;
     margin-top: 2rem;
-    background-color: #d1d1e9;
-    color: #475d5b;
+    background-color: #0f0e17;
+    color: #fffffe;
 }
 
 .song--detail > h3 {
@@ -70,13 +67,28 @@ ul {
     margin-top: 10px;
 }
 
+.card--style {
+    background-color: #0f0e17;
+    color: #fffffe;
+    padding: 1rem;
+}
+
+.style-heading {
+    padding-left: 4rem;
+    background-image: url('./svg/headphones.svg');
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 8%; 
+    font-size: 3rem;
+}
+
 .lyrics-card {
     margin-top: 3rem;
 }
 
-.lyrics-card > h2 {
-    /* color: #fffffe; */
-}
+/* .lyrics-card > h2 {
+    color: #fffffe;
+} */
 
 .lyrics {
     background-color: #f2f7f5;
@@ -115,4 +127,32 @@ ul {
     width: 50px;
     height: 50px;
     margin-top: 2rem;
+}
+
+.cart--card {
+    background-color: #0f0e17;
+    padding: 1rem;
+    color: #fffffe;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.cart--card > h3 {
+    margin: 0;
+}
+
+.cart--card > i {
+    align-self: center;
+}
+
+.buy {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.no-song {
+    font-size: 3rem;
+    text-align: center;
 }

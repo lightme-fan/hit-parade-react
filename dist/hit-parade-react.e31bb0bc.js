@@ -33866,32 +33866,36 @@ var songs = [{
   singer: 'Westlife',
   upvote: 10,
   downvote: 7,
-  style: 'folk',
-  lyrics: "So here we stand in our secret place\n            Where the sound of the crowd is so far away\n            You take my hand, and it fees like home\n            We both understand, it where we belong\n\n            So do I say, do I say goodbye\n            We both have our dreams we both want to fly\n            So lets take tonight, to carry us through the lonely times\n            I'll always look back as I walk away\n\n            Memories will last for eternity\n            And all of our tears will be lost in the rain\n            When I found my way back to your arms again\n            But until that day, you know you are\n\n            The Queen of my heart\n            So lets take tonight, and never let go\n            While we dance we kiss, like there's no tomorrow\n            As the stars sparkle down, like a diamond ring\n            I'll treasure this moment, till we meet again\n            But no matter how far, away you may be\n            I'll just close my eyes, and your in\u2026"
+  price: 1000,
+  style: 'Folk',
+  lyrics: ["So here we stand in our secret place\n            Where the sound of the crowd is so far away\n            You take my hand, and it fees like home\n            We both understand, it where we belong", "So do I say, do I say goodbye\n            We both have our dreams we both want to fly\n            So lets take tonight, to carry us through the lonely times\n            I'll always look back as I walk away", "Memories will last for eternity\n            And all of our tears will be lost in the rain\n            When I found my way back to your arms again\n            But until that day, you know you are", "The Queen of my heart\n            So lets take tonight, and never let go\n            While we dance we kiss, like there's no tomorrow\n            As the stars sparkle down, like a diamond ring\n            I'll treasure this moment, till we meet again\n            But no matter how far, away you may be\n            I'll just close my eyes, and your in\u2026"]
 }, {
   id: 2,
   title: 'Jerusalema',
   singer: 'Master KG',
   upvote: 100,
   downvote: 20,
+  price: 1000,
   style: 'Salegy',
-  lyrics: "\n            O wanitwa mos, O wanitwa mos\n            Master Master KG\n            O wanitwa mos\n\n            Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana\n\n            Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana\n\n            Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami\n\n            Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami\n\n            Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi lana\n\n            Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi\u2026            \n        "
+  lyrics: ["O wanitwa mos, O wanitwa mos\n            Master Master KG\n            O wanitwa mos", "Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana", "Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana", "Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami", "Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami", "Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi lana", "Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi\u2026"]
 }, {
   id: 3,
   title: 'Take Me Home, Country Roads',
   singer: 'John Denver',
   upvote: 20,
   downvote: 2,
+  price: 1000,
   style: 'Country',
-  lyrics: " \n        Almost heaven, West Virginia\n        Blue Ridge Mountains, Shenandoah River\n        Life is old there, older than the trees\n        Younger than the mountains, growin' like a breeze\n\n        Country roads, take me home\n        To the place I belong\n        West Virginia, mountain mama\n        Take me home, country roads\n\n        All my memories gather 'round her\n        Miner's lady, stranger to blue water\n        Dark and dusty, painted on the sky\n        Misty taste of moonshine, teardrop in my eye\n\n        Country roads, take me home\n        To the place I belong\n        West Virginia, mountain mama\n        Take me home, country roads\n\n        I hear her voice in the mornin' hour, she calls me\n        The radio reminds me of my home far away\n        Drivin' down the road, I get a feelin'\n        That I should've been home\u2026\n        "
+  lyrics: ["Almost heaven, West Virginia\n            Blue Ridge Mountains, Shenandoah River\n            Life is old there, older than the trees\n            Younger than the mountains, growin' like a breeze", "Country roads, take me home\n            To the place I belong\n            West Virginia, mountain mama\n            Take me home, country roads", "All my memories gather 'round her\n            Miner's lady, stranger to blue water\n            Dark and dusty, painted on the sky\n            Misty taste of moonshine, teardrop in my eye", "Country roads, take me home\n            To the place I belong\n            West Virginia, mountain mama\n            Take me home, country roads", "I hear her voice in the mornin' hour, she calls me\n            The radio reminds me of my home far away\n            Drivin' down the road, I get a feelin'\n            That I should've been home\u2026\n            "]
 }, {
   id: 4,
   title: 'Aza Itserana',
   singer: 'Mage4',
   upvote: 1000,
   downvote: 30,
+  price: 1000,
   style: 'Rock',
-  lyrics: "\n        Tonga teto ianao\n        Nilaza fa nahita ilay fitia\n        Lay nirianao hatrizay ka hatrizao\n        Mba faly anie aho\n        F'angamba ho sambatra @zay ianao\n        F'ilay fitia teto amiko angamba tsy ampy\n        \n        Ny alahelo tanatiko tao\n        Nafeniko tsy ho hitanao\n        Noeferiko ilay hany hasambarako\n        \n        Fa raha sendra\n        Mandalo mamangy any aho\n        Ka maso manganohano no hitanao\n        Raha mijery anao aho tsy sahy\n        Ka tsapanao fa toa mafy izany adimpanahy\n        Aza itserana akory aho\n        Efa sambatra ianao\n        Ampy izay\n        \n        Niala teto ianao\n        Fo mangaina sisa navelanao mba ho ahy\n        Fa tsy ho ahy ianao fa hiova fitia vaovao\n        \n        Ny alahelo..............\n        "
+  lyrics: ["Tonga teto ianao\n            Nilaza fa nahita ilay fitia\n            Lay nirianao hatrizay ka hatrizao\n            Mba faly anie aho\n            F'angamba ho sambatra @zay ianao\n            F'ilay fitia teto amiko angamba tsy ampy", "Ny alahelo tanatiko tao\n            Nafeniko tsy ho hitanao\n            Noeferiko ilay hany hasambarako", "Fa raha sendra\n            Mandalo mamangy any aho\n            Ka maso manganohano no hitanao\n            Raha mijery anao aho tsy sahy\n            Ka tsapanao fa toa mafy izany adimpanahy\n            Aza itserana akory aho\n            Efa sambatra ianao\n            Ampy izay", "Niala teto ianao\n            Fo mangaina sisa navelanao mba ho ahy\n            Fa tsy ho ahy ianao fa hiova fitia vaovao\n            \n            Ny alahelo..............\n            "]
 }];
 var _default = songs;
 exports.default = _default;
@@ -34040,6 +34044,7 @@ function ContextProvider(_ref) {
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       allSongs: allSongs,
+      setSongs: setSongs,
       handleFavoriteSong: handleFavoriteSong,
       cartSong: cartSong,
       setCart: setCart,
@@ -34298,20 +34303,70 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function Add() {
   var _useContext = (0, _react.useContext)(_ContextProvider.Context),
-      allSong = _useContext.allSong;
+      allSongs = _useContext.allSongs,
+      setSongs = _useContext.setSongs;
+
+  var _useState = (0, _react.useState)({
+    title: '',
+    singer: '',
+    style: '',
+    upvote: 0,
+    downvote: 0,
+    price: 1000
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      newSong = _useState2[0],
+      setNewSong = _useState2[1];
 
   function handleInput(e) {
-    console.log(e.target.value);
+    var _e$target = e.target,
+        name = _e$target.name,
+        value = _e$target.value;
+    setNewSong(function (prev) {
+      var _objectSpread2;
+
+      return _objectSpread(_objectSpread({}, prev), {}, (_objectSpread2 = {}, _defineProperty(_objectSpread2, name, value), _defineProperty(_objectSpread2, "id", new Date() + value), _objectSpread2));
+    });
   }
 
-  function handleClick(e) {
-    console.log(e.target.value);
+  function handleSubmit(e) {
+    e.preventDefault();
+    setSongs([].concat(_toConsumableArray(allSongs), [newSong]));
+    console.log(newSong);
+    console.log(allSongs);
   }
 
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "add--form"
+  return /*#__PURE__*/_react.default.createElement("form", {
+    className: "add--form",
+    onSubmit: handleSubmit
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Add a new Song"), /*#__PURE__*/_react.default.createElement("div", {
     className: "add--song"
   }, /*#__PURE__*/_react.default.createElement("fieldset", {
@@ -34320,25 +34375,39 @@ function Add() {
     type: "text",
     name: "title",
     placeholder: "Title",
-    onChange: handleInput
+    onChange: handleInput,
+    required: true
   }), /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
-    name: "artist",
+    name: "singer",
     placeholder: "Artist",
-    onChange: handleInput
+    onChange: handleInput,
+    required: true
   }), /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
     name: "price",
     placeholder: "Price",
-    onChange: handleInput
-  }), /*#__PURE__*/_react.default.createElement("textarea", {
+    onChange: handleInput,
+    required: true
+  }), /*#__PURE__*/_react.default.createElement("select", {
+    onChange: handleInput,
+    name: "style"
+  }, /*#__PURE__*/_react.default.createElement("option", {
+    value: "salegy"
+  }, "Salegy"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "folk"
+  }, "Folk"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "rap"
+  }, "Rap"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "reggea"
+  }, "Reggea")), /*#__PURE__*/_react.default.createElement("textarea", {
     type: "text",
     row: "5",
     name: "lyrics",
-    placeholder: "Lyrics"
-  }), /*#__PURE__*/_react.default.createElement("button", {
-    onClick: handleClick
-  }, "Add"))));
+    placeholder: "Lyrics",
+    onChange: handleInput,
+    required: true
+  }), /*#__PURE__*/_react.default.createElement("button", null, "Add"))));
 }
 
 var _default = Add;
@@ -34434,7 +34503,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function CartPage(_ref) {
   var title = _ref.title,
       singer = _ref.singer,
-      id = _ref.id;
+      id = _ref.id,
+      price = _ref.price;
 
   var _useHover = (0, _useHover3.default)(),
       _useHover2 = _slicedToArray(_useHover, 2),
@@ -34453,7 +34523,7 @@ function CartPage(_ref) {
     onClick: function onClick() {
       return removeFromCart(id);
     }
-  }), /*#__PURE__*/_react.default.createElement("h3", null, title, /*#__PURE__*/_react.default.createElement("br", null), " ", /*#__PURE__*/_react.default.createElement("span", null, singer)), /*#__PURE__*/_react.default.createElement("p", null, "Price:"));
+  }), /*#__PURE__*/_react.default.createElement("h3", null, title, /*#__PURE__*/_react.default.createElement("br", null), " ", /*#__PURE__*/_react.default.createElement("span", null, singer)), /*#__PURE__*/_react.default.createElement("p", null, "Price: ", price, " Ar"));
 }
 
 var _default = CartPage;
@@ -34510,13 +34580,20 @@ function Cart() {
     }, 3000);
   }
 
+  var filteredSong = cartSong.filter(function (song) {
+    return song.id;
+  });
+  var total = (filteredSong.length * 1000).toLocaleString();
+
   function showButtonButton() {
     if (cartSong.length > 0) {
-      return /*#__PURE__*/_react.default.createElement("button", {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("button", {
         onClick: buying
-      }, buyBtnText);
+      }, buyBtnText), /*#__PURE__*/_react.default.createElement("p", null, "Total: ", total, " ar"));
     } else {
-      return /*#__PURE__*/_react.default.createElement("p", null, "You have no song to buy");
+      return /*#__PURE__*/_react.default.createElement("p", {
+        className: "no-song"
+      }, "You have no song to buy");
     }
   }
 
@@ -34530,12 +34607,8 @@ function Cart() {
     }, song));
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "buy"
-  }, showButtonButton(), /*#__PURE__*/_react.default.createElement("p", null, "Total:")));
-} // CartItem.propTypes = {
-//     item: PropTypes.shape({
-//         url: PropTypes.string.isRequired
-//     })
-
+  }, showButtonButton()));
+}
 
 var _default = Cart;
 exports.default = _default;
@@ -34566,18 +34639,10 @@ function Lyrics(song) {
       id = _useParams.id;
 
   var newSong = allSongs.filter(function (i) {
-    return i.id === song.id;
+    return i.id;
   });
   console.log(newSong);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, newSong.map(function (song) {
-    return /*#__PURE__*/_react.default.createElement("div", {
-      className: "lyrics-card"
-    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      to: "/"
-    }, /*#__PURE__*/_react.default.createElement("span", null, "\u2190")), /*#__PURE__*/_react.default.createElement("h2", null, song.title, ": ", /*#__PURE__*/_react.default.createElement("span", null, song.singer)), /*#__PURE__*/_react.default.createElement("p", {
-      className: "lyrics"
-    }, song.lyrics));
-  }));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "Lyrics");
 }
 
 var _default = Lyrics;
@@ -34615,12 +34680,16 @@ function SongStyle() {
   var newSong = allSongs.filter(function (song) {
     return song.style === style;
   });
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("h2", null, style), newSong.map(function (song) {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "styles"
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    className: "style-heading"
+  }, style), newSong.map(function (song) {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: song.length + 1 + song.id,
       className: "card--style"
     }, /*#__PURE__*/_react.default.createElement("h4", null, song.title), /*#__PURE__*/_react.default.createElement("p", null, song.singer));
-  }));
+  })));
 }
 
 SongStyle.propTypes = {
@@ -34727,7 +34796,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54359" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55796" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

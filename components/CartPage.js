@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Context } from '../ContextProvider'
 import useHover from '../useHover'
 
-function CartPage({title, singer, id}) {
+function CartPage({title, singer, id, price}) {
     const [isHovered, ref] = useHover()
     const { removeFromCart } = useContext(Context)
 
@@ -16,7 +16,7 @@ function CartPage({title, singer, id}) {
                 onClick={()=>removeFromCart(id)}
             ></i>
             <h3>{title}<br/> <span>{singer}</span></h3>
-            <p>Price:</p>
+            <p>Price: {price} Ar</p>
         </div>
     )
 }

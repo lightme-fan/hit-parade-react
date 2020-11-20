@@ -10,13 +10,15 @@ function SongStyle() {
 
     return (
         <>
-            <h2>{style}</h2>
-            {newSong.map(song =>
-                <div key={song.length+1+song.id} className='card--style'>
-                    <h4>{song.title}</h4>
-                    <p>{song.singer}</p>
-                </div>
-            )}
+            <div className='styles'>
+                <h2 className='style-heading'>{style}</h2>
+                {newSong.map(song =>
+                    <div key={song.length+1+song.id} className='card--style'>
+                        <h4>{song.title}</h4>
+                        <p>{song.singer}</p>
+                    </div>
+                )}
+            </div>
 
         </>
     )

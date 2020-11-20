@@ -9,38 +9,41 @@ function Cart() {
     function  buying() {
 		setButtonText('Buying...')
 		setTimeout(() => {
-			setButtonText('Buy')
+            setButtonText('Buy')
 			emptyCart()
 		}, 3000);
     }
     
+    const filteredSong = cartSong.filter(song => song.id)
+    const total = (filteredSong.length * 1000).toLocaleString();
+    
     function showButtonButton() {		
 		if(cartSong.length >  0) {
-			return <button onClick={buying}>{buyBtnText}</button>
+			return (
+                <>
+                    <button onClick={buying}>{buyBtnText}</button>
+                    <p>Total: {total} ar</p>
+                </>
+            )
 		} else {
-			return <p>You have no song to buy</p>
+			return <p className='no-song'>You have no song to buy</p>
 		}
     }
 
     function emptyCart() {
 		setCart([])
     }
-    
+
     return (
         <>
-             {cartSong.map(song => 
+            {cartSong.map(song => 
                 <CartPage key={song.id} {...song}/>
             )}
             <div className='buy'>
-                {showButtonButton()}
-                <p>Total:</p>
+                {showButtonButton()}                              
             </div>
         </>
     )
 }
-// CartItem.propTypes = {
-//     item: PropTypes.shape({
-//         url: PropTypes.string.isRequired
-//     })
 
 export default Cart
