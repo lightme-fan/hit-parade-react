@@ -5,7 +5,7 @@ const songs = [
         singer: 'Westlife',
         upvote: 10,
         downvote: 7,
-        price: 1000,
+        price: 100,
         style: 'Folk',
         lyrics: 
             [`So here we stand in our secret place
@@ -37,7 +37,7 @@ const songs = [
         singer: 'Master KG',
         upvote: 100,
         downvote: 20,
-        price: 1000,
+        price: 100,
         style: 'Salegy',
         lyrics: 
         [
@@ -79,7 +79,7 @@ const songs = [
         singer: 'John Denver',
         upvote: 20,
         downvote: 2,
-        price: 1000,
+        price: 100,
         style: 'Country',
         lyrics: 
         [ 
@@ -116,7 +116,7 @@ const songs = [
         singer: 'Mage4',
         upvote: 1000,
         downvote: 30,
-        price: 1000,
+        price: 100,
         style: 'Rock',
         lyrics:
         [

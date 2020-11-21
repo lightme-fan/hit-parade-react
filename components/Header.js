@@ -11,8 +11,8 @@ function Header() {
     const findSong = allSongs.filter(song => song.id)
     console.log(findSong);
     const favoriteClassName = allSongs.length > 0 ?
-        'ri-heart-line':
-        'ri-heart-fill'        
+        'ri-heart-fill':
+        'ri-heart-line'        
 
     const cartClassName = cartSong.length > 0 ?
         "ri-shopping-cart-fill ri-fw ri-1x":
@@ -31,7 +31,7 @@ function Header() {
                     </li>
                     <li>
                         <Link to='/styles'>
-                            <i className={favoriteClassName}></i> Styles
+                            <i className={`${favoriteClassName} favorite--style`}></i> Styles
                         </Link>
                     </li>
                     <li>

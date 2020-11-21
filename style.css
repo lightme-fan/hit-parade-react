@@ -144,6 +144,10 @@ ul {
     margin-bottom: 2rem;
 }
 
+.lyrics > p > pre {
+    margin-top: 1rem;
+}
+
 /* Add song */
 .add--song {
     display: grid;
@@ -211,6 +215,10 @@ ul {
     align-self: center;
 }
 
+.delete--song {
+    cursor: pointer;
+}
+
 .buy {
     margin-top: 2rem;
     display: flex;
@@ -228,6 +236,10 @@ ul {
 
 .favorite:hover, .cart:hover {
     color: #FFD803;
+}
+
+.favorite--style {
+    color: red;
 }
 
 .buy > button {

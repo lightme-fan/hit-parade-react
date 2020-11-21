@@ -11,7 +11,7 @@ function CartPage({title, singer, id, price}) {
     return (
         <div className='cart--card'>
             <i 
-                className={deleteClass} 
+                className={`${deleteClass} delete--song`} 
                 ref={ref}
                 onClick={()=>removeFromCart(id)}
             ></i>

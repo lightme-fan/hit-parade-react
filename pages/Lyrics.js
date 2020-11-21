@@ -6,7 +6,10 @@ function Lyrics(song) {
     const {allSongs, showLyrics} = useContext(Context)
     const { id } = useParams()
     const songLyrics = allSongs.filter(i => i.id === Number(id))
-    
+    const aSong = allSongs.find(i => i.id === Number(id))
+    console.log({ aSong });
+    // console.log({song?.title});
+
     return (
         <>  
             {songLyrics.map((song, index) => 
@@ -14,14 +17,14 @@ function Lyrics(song) {
                     <Link to='/'><span>←</span></Link>
                     <h2>{song.title}: <span>{song.singer}</span></h2>
                     <div className='lyrics'>
-                        <p>{song.lyrics[0]}</p>
-                        <p>{song.lyrics[1]}</p>
-                        <p>{song.lyrics[2]}</p>
-                        <p>{song.lyrics[3]}</p>
-                        <p>{song.lyrics[4]}</p>
-                        <p>{song.lyrics[5]}</p>
-                        <p>{song.lyrics[6]}</p>
-                        <p>{song.lyrics[7]}</p>
+                        <pre>{song.lyrics[0]}</pre>
+                        <pre>{song.lyrics[1]}</pre>
+                        <pre>{song.lyrics[2]}</pre>
+                        <pre>{song.lyrics[3]}</pre>
+                        <pre>{song.lyrics[4]}</pre>
+                        <pre>{song.lyrics[5]}</pre>
+                        <pre>{song.lyrics[6]}</pre>
+                        <pre>{song.lyrics[7]}</pre>
                     </div>
                 </div>
             )}  

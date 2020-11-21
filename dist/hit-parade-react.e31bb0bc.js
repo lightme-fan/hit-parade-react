@@ -33866,7 +33866,7 @@ var songs = [{
   singer: 'Westlife',
   upvote: 10,
   downvote: 7,
-  price: 1000,
+  price: 100,
   style: 'Folk',
   lyrics: ["So here we stand in our secret place\n            Where the sound of the crowd is so far away\n            You take my hand, and it fees like home\n            We both understand, it where we belong", "So do I say, do I say goodbye\n            We both have our dreams we both want to fly\n            So lets take tonight, to carry us through the lonely times\n            I'll always look back as I walk away", "Memories will last for eternity\n            And all of our tears will be lost in the rain\n            When I found my way back to your arms again\n            But until that day, you know you are", "The Queen of my heart\n            So lets take tonight, and never let go\n            While we dance we kiss, like there's no tomorrow\n            As the stars sparkle down, like a diamond ring\n            I'll treasure this moment, till we meet again\n            But no matter how far, away you may be\n            I'll just close my eyes, and your in\u2026"]
 }, {
@@ -33875,7 +33875,7 @@ var songs = [{
   singer: 'Master KG',
   upvote: 100,
   downvote: 20,
-  price: 1000,
+  price: 100,
   style: 'Salegy',
   lyrics: ["O wanitwa mos, O wanitwa mos\n            Master Master KG\n            O wanitwa mos", "Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana", "Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana", "Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami", "Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami", "Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi lana", "Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi\u2026"]
 }, {
@@ -33884,7 +33884,7 @@ var songs = [{
   singer: 'John Denver',
   upvote: 20,
   downvote: 2,
-  price: 1000,
+  price: 100,
   style: 'Country',
   lyrics: ["Almost heaven, West Virginia\n            Blue Ridge Mountains, Shenandoah River\n            Life is old there, older than the trees\n            Younger than the mountains, growin' like a breeze", "Country roads, take me home\n            To the place I belong\n            West Virginia, mountain mama\n            Take me home, country roads", "All my memories gather 'round her\n            Miner's lady, stranger to blue water\n            Dark and dusty, painted on the sky\n            Misty taste of moonshine, teardrop in my eye", "Country roads, take me home\n            To the place I belong\n            West Virginia, mountain mama\n            Take me home, country roads", "I hear her voice in the mornin' hour, she calls me\n            The radio reminds me of my home far away\n            Drivin' down the road, I get a feelin'\n            That I should've been home\u2026\n            "]
 }, {
@@ -33893,7 +33893,7 @@ var songs = [{
   singer: 'Mage4',
   upvote: 1000,
   downvote: 30,
-  price: 1000,
+  price: 100,
   style: 'Rock',
   lyrics: ["Tonga teto ianao\n            Nilaza fa nahita ilay fitia\n            Lay nirianao hatrizay ka hatrizao\n            Mba faly anie aho\n            F'angamba ho sambatra @zay ianao\n            F'ilay fitia teto amiko angamba tsy ampy", "Ny alahelo tanatiko tao\n            Nafeniko tsy ho hitanao\n            Noeferiko ilay hany hasambarako", "Fa raha sendra\n            Mandalo mamangy any aho\n            Ka maso manganohano no hitanao\n            Raha mijery anao aho tsy sahy\n            Ka tsapanao fa toa mafy izany adimpanahy\n            Aza itserana akory aho\n            Efa sambatra ianao\n            Ampy izay", "Niala teto ianao\n            Fo mangaina sisa navelanao mba ho ahy\n            Fa tsy ho ahy ianao fa hiova fitia vaovao\n            \n            Ny alahelo..............\n            "]
 }];
@@ -34131,7 +34131,7 @@ function Header() {
     return song.id;
   });
   console.log(findSong);
-  var favoriteClassName = allSongs.length > 0 ? 'ri-heart-line' : 'ri-heart-fill';
+  var favoriteClassName = allSongs.length > 0 ? 'ri-heart-fill' : 'ri-heart-line';
   var cartClassName = cartSong.length > 0 ? "ri-shopping-cart-fill ri-fw ri-1x" : "ri-shopping-cart-line ri-fw ri-1x";
   return /*#__PURE__*/_react.default.createElement("header", {
     className: "header"
@@ -34145,7 +34145,7 @@ function Header() {
   }), /*#__PURE__*/_react.default.createElement("span", null, "Popular Songs"))), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/styles"
   }, /*#__PURE__*/_react.default.createElement("i", {
-    className: favoriteClassName
+    className: "".concat(favoriteClassName, " favorite--style")
   }), " Styles")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/add"
   }, /*#__PURE__*/_react.default.createElement("img", {
@@ -34604,7 +34604,7 @@ function CartPage(_ref) {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "cart--card"
   }, /*#__PURE__*/_react.default.createElement("i", {
-    className: deleteClass,
+    className: "".concat(deleteClass, " delete--song"),
     ref: ref,
     onClick: function onClick() {
       return removeFromCart(id);
@@ -34658,18 +34658,34 @@ function Cart() {
       cartSong = _useContext.cartSong,
       setCart = _useContext.setCart;
 
+  var _useState3 = (0, _react.useState)(0),
+      _useState4 = _slicedToArray(_useState3, 2),
+      total = _useState4[0],
+      setTotal = _useState4[1];
+
   function buying() {
     setButtonText('Buying...');
     setTimeout(function () {
       setButtonText('Buy');
+      alert('Thanks for buying. Please pay your purchases!');
       emptyCart();
     }, 3000);
   }
 
-  var filteredSong = cartSong.filter(function (song) {
-    return song.id;
-  });
-  var total = (filteredSong.length * 1000).toLocaleString();
+  (0, _react.useEffect)(function () {
+    var newTotal = cartSong.reduce(function (total, song) {
+      total += song.price;
+      return total;
+    }, 0);
+    setTotal(newTotal);
+  }, [cartSong]);
+
+  function totalPrice() {
+    return cartSong.reduce(function (total, song) {
+      total += song.price;
+      return total;
+    }, 0);
+  }
 
   function showButtonButton() {
     if (cartSong.length > 0) {
@@ -34727,6 +34743,13 @@ function Lyrics(song) {
   var songLyrics = allSongs.filter(function (i) {
     return i.id === Number(id);
   });
+  var aSong = allSongs.find(function (i) {
+    return i.id === Number(id);
+  });
+  console.log({
+    aSong: aSong
+  }); // console.log({song?.title});
+
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, songLyrics.map(function (song, index) {
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "lyrics-card",
@@ -34735,7 +34758,7 @@ function Lyrics(song) {
       to: "/"
     }, /*#__PURE__*/_react.default.createElement("span", null, "\u2190")), /*#__PURE__*/_react.default.createElement("h2", null, song.title, ": ", /*#__PURE__*/_react.default.createElement("span", null, song.singer)), /*#__PURE__*/_react.default.createElement("div", {
       className: "lyrics"
-    }, /*#__PURE__*/_react.default.createElement("p", null, song.lyrics[0]), /*#__PURE__*/_react.default.createElement("p", null, song.lyrics[1]), /*#__PURE__*/_react.default.createElement("p", null, song.lyrics[2]), /*#__PURE__*/_react.default.createElement("p", null, song.lyrics[3]), /*#__PURE__*/_react.default.createElement("p", null, song.lyrics[4]), /*#__PURE__*/_react.default.createElement("p", null, song.lyrics[5]), /*#__PURE__*/_react.default.createElement("p", null, song.lyrics[6]), /*#__PURE__*/_react.default.createElement("p", null, song.lyrics[7])));
+    }, /*#__PURE__*/_react.default.createElement("pre", null, song.lyrics[0]), /*#__PURE__*/_react.default.createElement("pre", null, song.lyrics[1]), /*#__PURE__*/_react.default.createElement("pre", null, song.lyrics[2]), /*#__PURE__*/_react.default.createElement("pre", null, song.lyrics[3]), /*#__PURE__*/_react.default.createElement("pre", null, song.lyrics[4]), /*#__PURE__*/_react.default.createElement("pre", null, song.lyrics[5]), /*#__PURE__*/_react.default.createElement("pre", null, song.lyrics[6]), /*#__PURE__*/_react.default.createElement("pre", null, song.lyrics[7])));
   }));
 }
 
@@ -34891,7 +34914,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57319" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60905" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

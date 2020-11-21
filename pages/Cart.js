@@ -1,21 +1,35 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Context } from '../ContextProvider'
 import CartPage from '../components/CartPage'
 
 function Cart() {
     const [buyBtnText, setButtonText] = useState('Buy')
     const {cartSong, setCart} = useContext(Context)
+    const [ total, setTotal ] = useState(0)
 
     function  buying() {
 		setButtonText('Buying...')
 		setTimeout(() => {
             setButtonText('Buy')
+            alert('Thanks for buying. Please pay your purchases!')
 			emptyCart()
 		}, 3000);
     }
     
-    const filteredSong = cartSong.filter(song => song.id)
-    const total = (filteredSong.length * 1000).toLocaleString();
+    useEffect(() => {
+        const newTotal = cartSong.reduce((total, song) => {
+            total += song.price;
+            return total
+        }, 0)
+        setTotal(newTotal)
+    }, [cartSong])
+
+    function totalPrice() {
+        return cartSong.reduce((total, song) => {
+            total += song.price;
+            return total
+        }, 0)
+    }
     
     function showButtonButton() {		
 		if(cartSong.length >  0) {
