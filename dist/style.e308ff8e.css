@@ -61,6 +61,8 @@ ul {
     margin-top: 2rem;
     background-color: #0f0e17;
     color: #fffffe;
+    border-radius: 5px;
+    box-shadow: 5px 5px 11px -3px #D8DEED;
 }
 
 .song--detail > h3 {
@@ -224,6 +226,10 @@ ul {
     color: #FFD803;
 }
 
+.favorite:hover, .cart:hover {
+    color: #FFD803;
+}
+
 .buy > button {
     width: 70px;
     height: 40px;
@@ -231,5 +237,7 @@ ul {
     border: none;
     cursor: pointer;
 }
+
+
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

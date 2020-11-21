@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import dots from '../svg/dots.svg'
 
 function Song({song}) {
-    const [ isLiked, setLike ] = useState(false) 
     const [ isHovered, setHover ] = useState(false)   
     const {
         allSongs,
@@ -34,7 +33,7 @@ function Song({song}) {
         }
     }
 
-    const cartIcon = () => {
+    const toggleCartIcon = () => {
         const inCart = cartSong.some(item => item.id === song.id)
         if (inCart) {
             return <i onClick={() => removeFromCart(song.id)} className="ri-shopping-cart-fill ri-fw ri-1x cart"></i>
@@ -54,7 +53,7 @@ function Song({song}) {
             <h3>{song.title}<br/> <small>{song.singer}</small></h3>
             <div><span className='count' onClick={() => clickUpvote(song.id)}>↑</span>  <span>{song.upvote}</span></div>
             <div><span className='count' onClick={() => clickDownVote(song.id)}>↓</span>  <span>{song.downvote}</span></div>
-            {cartIcon()}
+            {toggleCartIcon()}
             <Link to={`/song/${song.id}`}>●●●</Link>
         </li>
     )

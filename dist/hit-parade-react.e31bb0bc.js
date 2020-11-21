@@ -34040,7 +34040,7 @@ function ContextProvider(_ref) {
     var foundSong = allSongs.map(function (song) {
       if (song.id === id) {
         return _objectSpread(_objectSpread({}, song), {}, {
-          downvote: song.downvote - 1
+          downvote: song.downvote + 1
         });
       }
 
@@ -34203,13 +34203,8 @@ function Song(_ref) {
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
-      isLiked = _useState2[0],
-      setLike = _useState2[1];
-
-  var _useState3 = (0, _react.useState)(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      isHovered = _useState4[0],
-      setHover = _useState4[1];
+      isHovered = _useState2[0],
+      setHover = _useState2[1];
 
   var _useContext = (0, _react.useContext)(_ContextProvider.Context),
       allSongs = _useContext.allSongs,
@@ -34247,7 +34242,7 @@ function Song(_ref) {
     }
   };
 
-  var cartIcon = function cartIcon() {
+  var toggleCartIcon = function toggleCartIcon() {
     var inCart = cartSong.some(function (item) {
       return item.id === song.id;
     });
@@ -34284,7 +34279,7 @@ function Song(_ref) {
     onClick: function onClick() {
       return clickDownVote(song.id);
     }
-  }, "\u2193"), "  ", /*#__PURE__*/_react.default.createElement("span", null, song.downvote)), cartIcon(), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "\u2193"), "  ", /*#__PURE__*/_react.default.createElement("span", null, song.downvote)), toggleCartIcon(), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/song/".concat(song.id)
   }, "\u25CF\u25CF\u25CF"));
 }
@@ -34896,7 +34891,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53596" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57319" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

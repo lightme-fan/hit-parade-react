@@ -84,7 +84,7 @@ function ContextProvider({children}) {
             if(song.id === id) {
                 return {
                     ...song,
-                    downvote: song.downvote - 1
+                    downvote: song.downvote + 1
                 }
             }
             return song
