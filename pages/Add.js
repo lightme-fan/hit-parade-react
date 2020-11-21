@@ -28,6 +28,7 @@ function Add() {
         setSongs([...allSongs, newSong])
         console.log(newSong);
         console.log(allSongs);
+        e.target.reset();
     }
 
     return (

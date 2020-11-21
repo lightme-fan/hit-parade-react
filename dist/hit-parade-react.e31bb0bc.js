@@ -33961,7 +33961,7 @@ function ContextProvider(_ref) {
       cartSong = _useState4[0],
       setCart = _useState4[1];
 
-  (0, _react.useEffect)(function () {
+  var setSongFunc = function setSongFunc() {
     var lsSongs = JSON.parse(localStorage.getItem('allSongs'));
 
     if (lsSongs) {
@@ -33969,18 +33969,20 @@ function ContextProvider(_ref) {
     } else {
       setSongs(_songs.default);
     }
+  };
 
-    initialCartSong();
-  }, []);
+  function initialCart() {
+    var lsSong = JSON.parse(localStorage.getItem('cartSong'));
 
-  function initialCartSong() {
-    var lsSongs = JSON.parse(localStorage.getItem('cartSong'));
-
-    if (lsSongs) {
-      setCart(lsSongs);
+    if (lsSong) {
+      setCart(lsSong);
     }
   }
 
+  (0, _react.useEffect)(function () {
+    setSongFunc();
+    initialCart();
+  }, []);
   (0, _react.useEffect)(function () {
     if (allSongs.length > 0) {
       localStorage.setItem('allSongs', JSON.stringify(allSongs));
@@ -33988,7 +33990,7 @@ function ContextProvider(_ref) {
   }, [allSongs]);
   (0, _react.useEffect)(function () {
     if (cartSong.length > 0) {
-      localStorage.setItem('cartSongs', JSON.stringify(cartSong));
+      localStorage.setItem('cartSong', JSON.stringify(cartSong));
     }
   }, [cartSong]); // Handle Fanvorite
 
@@ -34100,7 +34102,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
@@ -34112,9 +34114,25 @@ var _smile = _interopRequireDefault(require("../svg/smile.svg"));
 
 var _heart = _interopRequireDefault(require("../svg/heart.svg"));
 
+var _ContextProvider = require("../ContextProvider");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function Header() {
+  var _useContext = (0, _react.useContext)(_ContextProvider.Context),
+      allSongs = _useContext.allSongs,
+      cartSong = _useContext.cartSong;
+
+  var findSong = allSongs.filter(function (song) {
+    return song.id;
+  });
+  console.log(findSong);
+  var favoriteClassName = allSongs.length > 0 ? 'ri-heart-line' : 'ri-heart-fill';
+  var cartClassName = cartSong.length > 0 ? "ri-shopping-cart-fill ri-fw ri-1x" : "ri-shopping-cart-line ri-fw ri-1x";
   return /*#__PURE__*/_react.default.createElement("header", {
     className: "header"
   }, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
@@ -34124,11 +34142,10 @@ function Header() {
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: _flame.default,
     alt: "Popular song"
-  }), " ", /*#__PURE__*/_react.default.createElement("span", null, "Popular Songs"))), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }), /*#__PURE__*/_react.default.createElement("span", null, "Popular Songs"))), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: _heart.default,
-    alt: "Styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: favoriteClassName
   }), " Styles")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/add"
   }, /*#__PURE__*/_react.default.createElement("img", {
@@ -34136,15 +34153,14 @@ function Header() {
     alt: "Add"
   }), " Add")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/cart"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: _cart.default,
-    alt: "Cart"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: cartClassName
   }), " Cart")))));
 }
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../svg/flame.svg":"svg/flame.svg","../svg/cart.svg":"svg/cart.svg","../svg/smile.svg":"svg/smile.svg","../svg/heart.svg":"svg/heart.svg"}],"svg/dots.svg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../svg/flame.svg":"svg/flame.svg","../svg/cart.svg":"svg/cart.svg","../svg/smile.svg":"svg/smile.svg","../svg/heart.svg":"svg/heart.svg","../ContextProvider":"ContextProvider.js"}],"svg/dots.svg":[function(require,module,exports) {
 module.exports = "/dots.77963c0e.svg";
 },{}],"components/Song.js":[function(require,module,exports) {
 "use strict";
@@ -34215,13 +34231,14 @@ function Song(_ref) {
 
   var toggleLikedSong = function toggleLikedSong() {
     if (song.isLiked) {
-      return /*#__PURE__*/_react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("i", {
         onClick: function onClick() {
           return handleFavoriteSong(song.id);
-        }
-      }, "\uD83D\uDC93");
+        },
+        className: "ri-heart-fill favorite"
+      });
     } else {
-      return /*#__PURE__*/_react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("i", {
         onClick: function onClick() {
           return handleFavoriteSong(song.id);
         },
@@ -34240,14 +34257,14 @@ function Song(_ref) {
         onClick: function onClick() {
           return removeFromCart(song.id);
         },
-        className: "ri-shopping-cart-fill ri-fw ri-1x"
+        className: "ri-shopping-cart-fill ri-fw ri-1x cart"
       });
     } else {
       return /*#__PURE__*/_react.default.createElement("i", {
         onClick: function onClick() {
           return addToCart(song);
         },
-        className: "ri-shopping-cart-line ri-fw ri-1x"
+        className: "ri-shopping-cart-line ri-fw ri-1x cart"
       });
     }
   };
@@ -34435,6 +34452,7 @@ function Add() {
     setSongs([].concat(_toConsumableArray(allSongs), [newSong]));
     console.log(newSong);
     console.log(allSongs);
+    e.target.reset();
   }
 
   return /*#__PURE__*/_react.default.createElement("form", {
@@ -34676,7 +34694,7 @@ function Cart() {
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, cartSong.map(function (song) {
     return /*#__PURE__*/_react.default.createElement(_CartPage.default, _extends({
-      key: song.id
+      key: song.title
     }, song));
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "buy"
@@ -34878,7 +34896,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55131" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53596" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

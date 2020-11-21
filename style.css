@@ -132,14 +132,6 @@ ul {
     margin-top: 3rem;
 }
 
-.song--style-btn > button {
-
-}
-
-/* .lyrics-card > h2 {
-    color: #fffffe;
-} */
-
 .lyrics {
     background-color: #f2f7f5;
     margin-right: 20%;
@@ -196,6 +188,8 @@ ul {
     height: 40px;
     margin-top: 2rem;
     background: #FFD803;
+    border: none;
+    cursor: pointer;
 }
 
 .cart--card {
@@ -224,4 +218,16 @@ ul {
 .no-song {
     font-size: 3rem;
     text-align: center;
+}
+
+.favorite, .cart {
+    color: #FFD803;
+}
+
+.buy > button {
+    width: 70px;
+    height: 40px;
+    background: #FFD803;
+    border: none;
+    cursor: pointer;
 }

@@ -37,7 +37,7 @@ function Cart() {
     return (
         <>
             {cartSong.map(song => 
-                <CartPage key={song.id} {...song}/>
+                <CartPage key={song.title} {...song}/>
             )}
             <div className='buy'>
                 {showButtonButton()}                              

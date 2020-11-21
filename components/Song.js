@@ -28,18 +28,18 @@ function Song({song}) {
 
     const toggleLikedSong = () => {
         if (song.isLiked) {
-            return <div onClick={() => handleFavoriteSong(song.id)}>💓</div>
+            return <i onClick={() => handleFavoriteSong(song.id)} className = 'ri-heart-fill favorite'></i>
         } else {
-            return <div onClick={() => handleFavoriteSong(song.id)} className = 'ri-heart-line favorite'></div>
+            return <i onClick={() => handleFavoriteSong(song.id)} className = 'ri-heart-line favorite'></i>
         }
     }
 
     const cartIcon = () => {
         const inCart = cartSong.some(item => item.id === song.id)
         if (inCart) {
-            return <i onClick={() => removeFromCart(song.id)} className="ri-shopping-cart-fill ri-fw ri-1x"></i>
+            return <i onClick={() => removeFromCart(song.id)} className="ri-shopping-cart-fill ri-fw ri-1x cart"></i>
         } else {
-            return <i onClick={() => addToCart(song)} className="ri-shopping-cart-line ri-fw ri-1x"></i>
+            return <i onClick={() => addToCart(song)} className="ri-shopping-cart-line ri-fw ri-1x cart"></i>
         }
     }
 

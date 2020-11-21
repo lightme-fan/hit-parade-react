@@ -7,32 +7,37 @@ function ContextProvider({children}) {
     const [ allSongs, setSongs ] = useState([])
     const [ cartSong, setCart ] = useState([])
     
-    useEffect(() => {
+    const setSongFunc = () => {
         const lsSongs = JSON.parse(localStorage.getItem('allSongs'))
         if (lsSongs) {
             setSongs(lsSongs)
         } else {
             setSongs(songs)
         }
-        initialCartSong()
-    }, [])
+    }
 
-    function initialCartSong() {
-		const lsSongs = JSON.parse(localStorage.getItem('cartSong'))
-		if (lsSongs) {
-			setCart(lsSongs)
+    function initialCart() {
+		const lsSong = JSON.parse(localStorage.getItem('cartSong'))
+		if (lsSong) {
+			setCart(lsSong)
 		} 
-	}
-
+    }
+    
     useEffect(() => {
-		if (allSongs.length > 0) {
-			localStorage.setItem('allSongs', JSON.stringify(allSongs))
+		setSongFunc()
+		initialCart()
+    }, [])
+    
+    useEffect(() => {
+        if (allSongs.length > 0) {
+            localStorage.setItem('allSongs', JSON.stringify(allSongs))
 		}
-	}, [allSongs])
-	
+    }, [allSongs])
+    
+    
 	useEffect(() => {
 		if (cartSong.length > 0) {
-			localStorage.setItem('cartSongs', JSON.stringify(cartSong))
+			localStorage.setItem('cartSong', JSON.stringify(cartSong))
 		}
 	}, [cartSong])
 	
