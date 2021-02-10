@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import flame from '../svg/flame.svg'
-import cart from '../svg/cart.svg'
-import smile from '../svg/smile.svg'
-import heart from '../svg/heart.svg'
+import flame from '../../svg/flame.svg'
+import cart from '../../svg/cart.svg'
+import smile from '../../svg/smile.svg'
+import heart from '../../svg/heart.svg'
 import { Context } from '../ContextProvider'
 
 function Header() {

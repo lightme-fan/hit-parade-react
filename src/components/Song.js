@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Context } from '../ContextProvider'
 import { Link } from 'react-router-dom'
-import dots from '../svg/dots.svg'
+import dots from '../../svg/dots.svg'
 
 function Song({song}) {
     const [ isHovered, setHover ] = useState(false)   

@@ -33873,7 +33873,7 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"songs.js":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/songs.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33919,7 +33919,7 @@ var songs = [{
 }];
 var _default = songs;
 exports.default = _default;
-},{}],"ContextProvider.js":[function(require,module,exports) {
+},{}],"src/ContextProvider.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34106,7 +34106,7 @@ function ContextProvider(_ref) {
     }
   }, children);
 }
-},{"react":"node_modules/react/index.js","./songs":"songs.js"}],"svg/flame.svg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./songs":"src/songs.js"}],"svg/flame.svg":[function(require,module,exports) {
 module.exports = "/flame.05a8020b.svg";
 },{}],"svg/cart.svg":[function(require,module,exports) {
 module.exports = "/cart.ce92f439.svg";
@@ -34114,7 +34114,7 @@ module.exports = "/cart.ce92f439.svg";
 module.exports = "/smile.2a0eba27.svg";
 },{}],"svg/heart.svg":[function(require,module,exports) {
 module.exports = "/heart.e1dfda28.svg";
-},{}],"components/Header.js":[function(require,module,exports) {
+},{}],"src/components/Header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34126,13 +34126,13 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _flame = _interopRequireDefault(require("../svg/flame.svg"));
+var _flame = _interopRequireDefault(require("../../svg/flame.svg"));
 
-var _cart = _interopRequireDefault(require("../svg/cart.svg"));
+var _cart = _interopRequireDefault(require("../../svg/cart.svg"));
 
-var _smile = _interopRequireDefault(require("../svg/smile.svg"));
+var _smile = _interopRequireDefault(require("../../svg/smile.svg"));
 
-var _heart = _interopRequireDefault(require("../svg/heart.svg"));
+var _heart = _interopRequireDefault(require("../../svg/heart.svg"));
 
 var _ContextProvider = require("../ContextProvider");
 
@@ -34180,9 +34180,9 @@ function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../svg/flame.svg":"svg/flame.svg","../svg/cart.svg":"svg/cart.svg","../svg/smile.svg":"svg/smile.svg","../svg/heart.svg":"svg/heart.svg","../ContextProvider":"ContextProvider.js"}],"svg/dots.svg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../../svg/flame.svg":"svg/flame.svg","../../svg/cart.svg":"svg/cart.svg","../../svg/smile.svg":"svg/smile.svg","../../svg/heart.svg":"svg/heart.svg","../ContextProvider":"src/ContextProvider.js"}],"svg/dots.svg":[function(require,module,exports) {
 module.exports = "/dots.77963c0e.svg";
-},{}],"components/Song.js":[function(require,module,exports) {
+},{}],"src/components/Song.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34198,7 +34198,7 @@ var _ContextProvider = require("../ContextProvider");
 
 var _reactRouterDom = require("react-router-dom");
 
-var _dots = _interopRequireDefault(require("../svg/dots.svg"));
+var _dots = _interopRequireDefault(require("../../svg/dots.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34314,7 +34314,7 @@ Song.propTypes = {
 };
 var _default = Song;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","../ContextProvider":"ContextProvider.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../svg/dots.svg":"svg/dots.svg"}],"pages/PopularSongs.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","../ContextProvider":"src/ContextProvider.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../../svg/dots.svg":"svg/dots.svg"}],"src/pages/PopularSongs.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34355,7 +34355,7 @@ function PopularSongs() {
 
 var _default = PopularSongs;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../components/Song":"components/Song.js","../ContextProvider":"ContextProvider.js"}],"pages/Styles.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components/Song":"src/components/Song.js","../ContextProvider":"src/ContextProvider.js"}],"src/pages/Styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34392,7 +34392,7 @@ function Styles() {
 
 var _default = Styles;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../ContextProvider":"ContextProvider.js"}],"pages/Add.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../ContextProvider":"src/ContextProvider.js"}],"src/pages/Add.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34518,7 +34518,7 @@ function Add() {
 
 var _default = Add;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../ContextProvider":"ContextProvider.js"}],"useHover.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../ContextProvider":"src/ContextProvider.js"}],"src/useHover.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34574,7 +34574,7 @@ function useHover() {
 
 var _default = useHover;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"components/CartPage.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"src/components/CartPage.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34634,7 +34634,7 @@ function CartPage(_ref) {
 
 var _default = CartPage;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../ContextProvider":"ContextProvider.js","../useHover":"useHover.js"}],"pages/Cart.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../ContextProvider":"src/ContextProvider.js","../useHover":"src/useHover.js"}],"src/pages/Cart.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34734,7 +34734,7 @@ function Cart() {
 
 var _default = Cart;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../ContextProvider":"ContextProvider.js","../components/CartPage":"components/CartPage.js"}],"pages/Lyrics.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../ContextProvider":"src/ContextProvider.js","../components/CartPage":"src/components/CartPage.js"}],"src/pages/Lyrics.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34784,7 +34784,7 @@ function Lyrics(song) {
 
 var _default = Lyrics;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../ContextProvider":"ContextProvider.js"}],"components/SongStyle.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../ContextProvider":"src/ContextProvider.js"}],"src/components/SongStyle.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34840,7 +34840,7 @@ SongStyle.propTypes = {
 };
 var _default = SongStyle;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../ContextProvider":"ContextProvider.js","prop-types":"node_modules/prop-types/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"components/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../ContextProvider":"src/ContextProvider.js","prop-types":"node_modules/prop-types/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34890,7 +34890,7 @@ function App() {
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Header":"components/Header.js","../pages/PopularSongs":"pages/PopularSongs.js","../pages/Styles":"pages/Styles.js","../pages/Add":"pages/Add.js","../pages/Cart":"pages/Cart.js","../pages/Lyrics":"pages/Lyrics.js","./SongStyle":"components/SongStyle.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Header":"src/components/Header.js","../pages/PopularSongs":"src/pages/PopularSongs.js","../pages/Styles":"src/pages/Styles.js","../pages/Add":"src/pages/Add.js","../pages/Cart":"src/pages/Cart.js","../pages/Lyrics":"src/pages/Lyrics.js","./SongStyle":"src/components/SongStyle.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -34906,7 +34906,7 @@ var _App = _interopRequireDefault(require("./components/App"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_ContextProvider.ContextProvider, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null))), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./ContextProvider":"ContextProvider.js","./components/App":"components/App.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./ContextProvider":"src/ContextProvider.js","./components/App":"src/components/App.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -34934,7 +34934,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63381" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64605" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -35110,5 +35110,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/hit-parade-react.e31bb0bc.js.map
+},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.js"], null)
+//# sourceMappingURL=/src.a2b27638.js.map
