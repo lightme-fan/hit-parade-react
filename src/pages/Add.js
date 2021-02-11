@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react'
+import { connect } from 'react-redux';
 import { Context } from '../ContextProvider'
 
-function Add() {
-    const {allSongs, setSongs} = useContext(Context)
+function Add({allSongs}) {
     const [newSong, setNewSong] = useState({
         title: '',
         singer: '',
         style: '',
+        isLiked: false,
         upvote: 0,
         downvote: 0,
         price: 1000,
@@ -25,9 +26,6 @@ function Add() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        setSongs([...allSongs, newSong])
-        console.log(newSong);
-        console.log(allSongs);
         e.target.reset();
     }
 
@@ -56,4 +54,4 @@ function Add() {
     )
 }
 
-export default Add
+export default connect((state) => ({allSongs: state.allSongs}), null)(Add)

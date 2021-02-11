@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
+import { connect } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import { Context } from '../ContextProvider'
 
-function Lyrics(song) {
-    const {allSongs, showLyrics} = useContext(Context)
+function Lyrics({allSongs, showLyrics}) {
     const { id } = useParams()
     const songLyrics = allSongs.filter(i => i.id === Number(id))
     const aSong = allSongs.find(i => i.id === Number(id))
@@ -32,4 +32,4 @@ function Lyrics(song) {
     )
 }
 
-export default Lyrics
+export default connect((state) => ({allSongs: state.allSongs}), null)(Lyrics)

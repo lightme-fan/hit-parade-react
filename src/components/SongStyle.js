@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import { Context } from '../ContextProvider'
 import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-function SongStyle() {
-    const {allSongs, songStyle} = useContext(Context)
+function SongStyle({allSongs}) {
     const { style } = useParams()
     const newSong = allSongs.filter(song => song.style === style)
     console.log(newSong);
@@ -33,4 +33,4 @@ SongStyle.propTypes ={
     })
 }
 
-export default SongStyle
+export default connect((state) => ({allSongs: state.allSongs}), null)(SongStyle)

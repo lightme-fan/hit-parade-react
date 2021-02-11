@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Context } from '../ContextProvider'
-import useHover from '../useHover'
+import useHover from '../customHooks/useHover'
 
 function CartPage({title, singer, id, price}) {
     const [isHovered, ref] = useHover()

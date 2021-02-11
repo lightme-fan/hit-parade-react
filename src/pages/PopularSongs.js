@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
+import { connect } from 'react-redux';
 import Song from '../components/Song';
 import {Context} from '../ContextProvider'
+import { handleFavoriteSong } from '../redux/actions';
 
-function PopularSongs() {
-    const { allSongs } = useContext(Context)
+function PopularSongs({allSongs}) {
     
     const mapped = allSongs
     .sort((a,b) => {
@@ -11,9 +12,9 @@ function PopularSongs() {
         const sortDownvotes = a.downvote - b.downvote
         return sortDownvotes - sortUpvotes
     })
-    .map(song => 
-        <Song key={song.title} song={song} />
-    )
+    .map(song => {
+        return <Song key={song.title} song={song} />
+    })
 
     return (
         <ul className='song'>
@@ -22,4 +23,11 @@ function PopularSongs() {
     )
 }
 
-export default PopularSongs
+const mapStateToProps = (state) => {
+    const { allSongs } = state
+    return {
+        allSongs: state.allSongs
+    }
+}
+
+export default connect(mapStateToProps, null)(PopularSongs)

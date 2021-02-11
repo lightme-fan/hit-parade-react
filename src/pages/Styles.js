@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
+import { connect } from 'react-redux'
 import {Link} from 'react-router-dom'
-import { Context } from '../ContextProvider'
 
-function Styles() {
-    const {allSongs, songStyle} = useContext(Context)
+function Styles({allSongs}) {
     return (
         <>
             {allSongs.map(song =>
@@ -15,4 +14,4 @@ function Styles() {
     )
 }
 
-export default Styles
+export default connect((state) => ({allSongs: state.allSongs}))(Styles)

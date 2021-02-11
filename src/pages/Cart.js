@@ -1,10 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { Context } from '../ContextProvider'
 import CartPage from '../components/CartPage'
+import { connect } from 'react-redux'
 
-function Cart() {
+function Cart({cartSong}) {
     const [buyBtnText, setButtonText] = useState('Buy')
-    const {cartSong, setCart} = useContext(Context)
+    const {setCart} = useContext(Context)
     const [ total, setTotal ] = useState(0)
 
     function  buying() {
@@ -60,4 +61,11 @@ function Cart() {
     )
 }
 
-export default Cart
+function mapStateToProps(state) {
+    console.log(state);
+    return {
+        cartSong: state.cartSong
+    }
+}
+
+export default connect(mapStateToProps, null)(Cart)

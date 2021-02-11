@@ -102,7 +102,7 @@ ul {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    background-image: url('./svg/headphones.svg');
+    background-image: url('/headphones.cbde56e7.svg');
     background-repeat: no-repeat;
     background-position: 9%;
     background-size: 28%;
@@ -123,7 +123,7 @@ ul {
 }
 .styles > .style-heading {
     padding-left: 6rem;
-    background-image: url('./svg/headphones.svg');
+    background-image: url('/headphones.cbde56e7.svg');
     background-repeat: no-repeat;
     background-position: 0%;
     background-size: 7%; 
@@ -250,3 +250,6 @@ ul {
     cursor: pointer;
 }
 
+
+
+/*# sourceMappingURL=/style.967ba849.css.map */

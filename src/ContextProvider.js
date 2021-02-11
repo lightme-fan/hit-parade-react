@@ -34,6 +34,7 @@ function ContextProvider({children}) {
 		}
     }, [allSongs])
     
+    console.log(cartSong);
     
 	useEffect(() => {
 		if (cartSong.length > 0) {

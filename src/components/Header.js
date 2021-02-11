@@ -5,18 +5,17 @@ import cart from '../../svg/cart.svg'
 import smile from '../../svg/smile.svg'
 import heart from '../../svg/heart.svg'
 import { Context } from '../ContextProvider'
+import { connect } from 'react-redux'
 
-function Header() {
-    const { allSongs, cartSong} = useContext(Context)
+function Header({allSongs, cartSong}) {
     const findSong = allSongs.filter(song => song.id)
-    console.log(findSong);
     const favoriteClassName = allSongs.length > 0 ?
         'ri-heart-fill':
         'ri-heart-line'        
 
-    const cartClassName = cartSong.length > 0 ?
-        "ri-shopping-cart-fill ri-fw ri-1x":
-        "ri-shopping-cart-line ri-fw ri-1x"
+    // const cartClassName = cartSong.length > 0 ?
+    //     "ri-shopping-cart-fill ri-fw ri-1x":
+    //     "ri-shopping-cart-line ri-fw ri-1x"
 
     return (
         <header className='header'>
@@ -38,9 +37,9 @@ function Header() {
                         <Link to='/add'><img src={smile} alt='Add'/> Add</Link>
                     </li>
                     <li>
-                        <Link to='/cart'>
+                        {/* <Link to='/cart'>
                             <i className={cartClassName}></i> Cart
-                        </Link>
+                        </Link> */}
                     </li>
                 </ul>
             </nav>
@@ -48,4 +47,11 @@ function Header() {
     )
 }
 
-export default Header
+function mapStateToProps(state) {
+    return {
+        allSongs: state.allSongs,
+        cartSong: state.cartSong
+    }
+}
+
+export default connect(mapStateToProps, null)(Header)

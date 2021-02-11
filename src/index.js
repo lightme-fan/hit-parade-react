@@ -1,15 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
-import {ContextProvider} from './ContextProvider'
-import App from './components/App'
+
+import App from './App'
+import { Provider } from 'react-redux'
+import store from './store/store'
+import { ContextProvider } from './ContextProvider'
 
 ReactDOM.render(
-    <ContextProvider>
+    <Provider store={store}>
         <Router>
             <App/>
         </Router>
-    </ContextProvider>
+    </Provider>
     , 
     document.getElementById('root')
 )
