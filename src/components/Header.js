@@ -13,9 +13,9 @@ function Header({allSongs, cartSong}) {
         'ri-heart-fill':
         'ri-heart-line'        
 
-    // const cartClassName = cartSong.length > 0 ?
-    //     "ri-shopping-cart-fill ri-fw ri-1x":
-    //     "ri-shopping-cart-line ri-fw ri-1x"
+    const cartClassName = cartSong.length > 0 ?
+        "ri-shopping-cart-fill ri-fw ri-1x":
+        "ri-shopping-cart-line ri-fw ri-1x"
 
     return (
         <header className='header'>
@@ -37,9 +37,9 @@ function Header({allSongs, cartSong}) {
                         <Link to='/add'><img src={smile} alt='Add'/> Add</Link>
                     </li>
                     <li>
-                        {/* <Link to='/cart'>
+                        <Link to='/cart'>
                             <i className={cartClassName}></i> Cart
-                        </Link> */}
+                        </Link>
                     </li>
                 </ul>
             </nav>
@@ -50,7 +50,7 @@ function Header({allSongs, cartSong}) {
 function mapStateToProps(state) {
     return {
         allSongs: state.allSongs,
-        cartSong: state.cartSong
+        cartSong: state.cartItem
     }
 }
 

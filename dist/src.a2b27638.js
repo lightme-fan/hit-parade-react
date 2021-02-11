@@ -33892,7 +33892,7 @@ var songs = [{
   id: 1,
   title: 'Queen of My Heart',
   singer: 'Westlife',
-  isLiked: false,
+  isLiked: true,
   upvote: 10,
   downvote: 7,
   price: 100,
@@ -33922,7 +33922,7 @@ var songs = [{
   id: 4,
   title: 'Aza Itserana',
   singer: 'Mage4',
-  isLiked: false,
+  isLiked: true,
   upvote: 1000,
   downvote: 30,
   price: 100,
@@ -36519,10 +36519,8 @@ function Header(_ref) {
   var findSong = allSongs.filter(function (song) {
     return song.id;
   });
-  var favoriteClassName = allSongs.length > 0 ? 'ri-heart-fill' : 'ri-heart-line'; // const cartClassName = cartSong.length > 0 ?
-  //     "ri-shopping-cart-fill ri-fw ri-1x":
-  //     "ri-shopping-cart-line ri-fw ri-1x"
-
+  var favoriteClassName = allSongs.length > 0 ? 'ri-heart-fill' : 'ri-heart-line';
+  var cartClassName = cartSong.length > 0 ? "ri-shopping-cart-fill ri-fw ri-1x" : "ri-shopping-cart-line ri-fw ri-1x";
   return /*#__PURE__*/_react.default.createElement("header", {
     className: "header"
   }, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
@@ -36541,22 +36539,24 @@ function Header(_ref) {
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: _smile.default,
     alt: "Add"
-  }), " Add")), /*#__PURE__*/_react.default.createElement("li", null))));
+  }), " Add")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/cart"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: cartClassName
+  }), " Cart")))));
 }
 
 function mapStateToProps(state) {
   return {
     allSongs: state.allSongs,
-    cartSong: state.cartSong
+    cartSong: state.cartItem
   };
 }
 
 var _default = (0, _reactRedux.connect)(mapStateToProps, null)(Header);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../../svg/flame.svg":"svg/flame.svg","../../svg/cart.svg":"svg/cart.svg","../../svg/smile.svg":"svg/smile.svg","../../svg/heart.svg":"svg/heart.svg","../ContextProvider":"src/ContextProvider.js","react-redux":"node_modules/react-redux/es/index.js"}],"svg/dots.svg":[function(require,module,exports) {
-module.exports = "/dots.77963c0e.svg";
-},{}],"src/redux/actions.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../../svg/flame.svg":"svg/flame.svg","../../svg/cart.svg":"svg/cart.svg","../../svg/smile.svg":"svg/smile.svg","../../svg/heart.svg":"svg/heart.svg","../ContextProvider":"src/ContextProvider.js","react-redux":"node_modules/react-redux/es/index.js"}],"src/redux/actions.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36569,6 +36569,8 @@ exports.upvoteSong = upvoteSong;
 exports.downvoteSong = downvoteSong;
 exports.styles = styles;
 exports.addNewSong = addNewSong;
+exports.addToCart = addToCart;
+exports.removeFromCart = removeFromCart;
 
 function getSongs(song) {
   return {
@@ -36618,6 +36620,20 @@ function addNewSong(song) {
     payload: song
   };
 }
+
+function addToCart(item) {
+  return {
+    type: "ADD_TO_CART",
+    payload: item
+  };
+}
+
+function removeFromCart(item) {
+  return {
+    type: "REMOVE_FROM_CART",
+    payload: item
+  };
+}
 },{}],"src/components/Song.js":[function(require,module,exports) {
 "use strict";
 
@@ -36630,11 +36646,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _ContextProvider = require("../ContextProvider");
-
 var _reactRouterDom = require("react-router-dom");
-
-var _dots = _interopRequireDefault(require("../../svg/dots.svg"));
 
 var _reactRedux = require("react-redux");
 
@@ -36697,15 +36709,29 @@ function Song(_ref) {
         className: "ri-heart-line favorite"
       });
     }
-  }; // const toggleCartIcon = () => {
-  //     const inCart = cartSong.some(item => item.id === song.id)
-  //     if (inCart) {
-  //         return <i onClick={() => removeFromCart(song.id)} className="ri-shopping-cart-fill ri-fw ri-1x cart"></i>
-  //     } else {
-  //         return <i onClick={() => addToCart(song)} className="ri-shopping-cart-line ri-fw ri-1x cart"></i>
-  //     }
-  // }
+  };
 
+  var toggleCartIcon = function toggleCartIcon() {
+    var inCart = cartSong.some(function (item) {
+      return item.id === song.id;
+    });
+
+    if (inCart) {
+      return /*#__PURE__*/_react.default.createElement("i", {
+        onClick: function onClick() {
+          return removeFromCart(song.id);
+        },
+        className: "ri-shopping-cart-fill ri-fw ri-1x cart"
+      });
+    } else {
+      return /*#__PURE__*/_react.default.createElement("i", {
+        onClick: function onClick() {
+          return addToCart(song);
+        },
+        className: "ri-shopping-cart-line ri-fw ri-1x cart"
+      });
+    }
+  };
 
   return /*#__PURE__*/_react.default.createElement("li", {
     className: "song--detail"
@@ -36722,7 +36748,7 @@ function Song(_ref) {
     onClick: function onClick() {
       return clickDownVote(song.id);
     }
-  }, "\u2193"), "  ", /*#__PURE__*/_react.default.createElement("span", null, song.downvote)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "\u2193"), "  ", /*#__PURE__*/_react.default.createElement("span", null, song.downvote)), toggleCartIcon(), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/song/".concat(song.id)
   }, "\u25CF\u25CF\u25CF"));
 }
@@ -36738,13 +36764,19 @@ Song.propTypes = {
 var mapDispatchToState = {
   handleFavoriteSong: _actions.handleFavoriteSong,
   clickUpvote: _actions.upvoteSong,
-  clickDownVote: _actions.downvoteSong
+  clickDownVote: _actions.downvoteSong,
+  addToCart: _actions.addToCart,
+  removeFromCart: _actions.removeFromCart
 };
 
-var _default = (0, _reactRedux.connect)(null, mapDispatchToState)(Song);
+var _default = (0, _reactRedux.connect)(function (state) {
+  return {
+    cartSong: state.cartItem
+  };
+}, mapDispatchToState)(Song);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","../ContextProvider":"src/ContextProvider.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../../svg/dots.svg":"svg/dots.svg","react-redux":"node_modules/react-redux/es/index.js","../redux/actions":"src/redux/actions.js"}],"src/pages/PopularSongs.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-redux":"node_modules/react-redux/es/index.js","../redux/actions":"src/redux/actions.js"}],"src/pages/PopularSongs.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37087,6 +37119,8 @@ var _CartPage = _interopRequireDefault(require("../components/CartPage"));
 
 var _reactRedux = require("react-redux");
 
+var _actions = require("../redux/actions");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -37108,15 +37142,13 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function Cart(_ref) {
-  var cartSong = _ref.cartSong;
+  var cartSong = _ref.cartSong,
+      setCart = _ref.setCart;
 
   var _useState = (0, _react.useState)('Buy'),
       _useState2 = _slicedToArray(_useState, 2),
       buyBtnText = _useState2[0],
       setButtonText = _useState2[1];
-
-  var _useContext = (0, _react.useContext)(_ContextProvider.Context),
-      setCart = _useContext.setCart;
 
   var _useState3 = (0, _react.useState)(0),
       _useState4 = _slicedToArray(_useState3, 2),
@@ -37173,16 +37205,18 @@ function Cart(_ref) {
 }
 
 function mapStateToProps(state) {
-  console.log(state);
+  console.log(state.allSongs);
   return {
-    cartSong: state.cartSong
+    cartSong: state.cartItem
   };
 }
 
-var _default = (0, _reactRedux.connect)(mapStateToProps, null)(Cart);
+var _default = (0, _reactRedux.connect)(mapStateToProps, {
+  setCart: _actions.addToCart
+})(Cart);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../ContextProvider":"src/ContextProvider.js","../components/CartPage":"src/components/CartPage.js","react-redux":"node_modules/react-redux/es/index.js"}],"src/pages/Lyrics.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../ContextProvider":"src/ContextProvider.js","../components/CartPage":"src/components/CartPage.js","react-redux":"node_modules/react-redux/es/index.js","../redux/actions":"src/redux/actions.js"}],"src/pages/Lyrics.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37343,7 +37377,9 @@ function App() {
     path: "/styles/:style"
   }, /*#__PURE__*/_react.default.createElement(_SongStyle.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/add"
-  }, /*#__PURE__*/_react.default.createElement(_Add.default, null))));
+  }, /*#__PURE__*/_react.default.createElement(_Add.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/cart"
+  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null))));
 }
 
 var _default = App;
@@ -37376,6 +37412,7 @@ exports.cartReducer = cartReducer;
 exports.favoriteReducer = favoriteReducer;
 exports.songStyleReducer = songStyleReducer;
 exports.addSongReducer = addSongReducer;
+exports.handleCartReducer = handleCartReducer;
 
 var _state = _interopRequireDefault(require("../state"));
 
@@ -37399,7 +37436,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var allSongs = _state.default.allSongs;
+var allSongs = _state.default.allSongs,
+    cartItem = _state.default.cartItem;
 
 function songReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
@@ -37507,6 +37545,24 @@ function addSongReducer() {
       return state;
   }
 }
+
+function handleCartReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : cartItem;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case "ADD_TO_CART":
+      return [].concat(_toConsumableArray(state), [action.payload]);
+
+    case "REMOVE_FROM_CART":
+      return state.filter(function (item) {
+        return item.id !== action.payload;
+      });
+
+    default:
+      return state;
+  }
+}
 },{"../state":"src/state.js"}],"src/redux/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -37523,7 +37579,8 @@ var rootReducer = (0, _redux.combineReducers)({
   allSongs: _reducers.songReducer,
   cartItem: _reducers.cartReducer,
   favorite: _reducers.favoriteReducer,
-  add: _reducers.addSongReducer
+  add: _reducers.addSongReducer,
+  handleCart: _reducers.handleCartReducer
 });
 exports.rootReducer = rootReducer;
 },{"redux":"node_modules/redux/es/redux.js","./reducers":"src/redux/reducers.js"}],"src/store/store.js":[function(require,module,exports) {
@@ -37598,7 +37655,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65420" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53629" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

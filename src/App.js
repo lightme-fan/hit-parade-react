@@ -19,7 +19,7 @@ function App() {
                 <Route exact path='/styles'><Styles/></Route>
                 <Route path='/styles/:style'><SongStyle/></Route>
                 <Route path='/add'><Add/></Route>
-                {/* <Route path='/cart'><Cart/></Route> */}
+                <Route path='/cart'><Cart/></Route>
             </Switch>
         </article>
     )
