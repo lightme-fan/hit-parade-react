@@ -47,6 +47,13 @@ export function addNewSong(song) {
     }
 }
 
+export function handleInputChange(song) {
+    return {
+        type: "HANDLE_INPUT_CHANGE",
+        payload: song
+    }
+}
+
 export function addToCart(item) {
     return {
         type: "ADD_TO_CART",
@@ -58,5 +65,47 @@ export function removeFromCart(item) {
     return {
         type: "REMOVE_FROM_CART",
         payload: item
+    }
+}
+
+export function boughtCart(item) {
+    return {
+        type: "BOUGHT_CART",
+        payload: item
+    }
+}
+
+export function setTitle(text) {
+    return {
+        type: "ADD_TITLE",
+        payload: text
+    }
+}
+
+export function setSinger(value) {
+    return {
+        type: "ADD_SINGER",
+        payload: value
+    }
+}
+
+export function setPrice(value) {
+    return {
+        type: "ADD_PRICE",
+        payload: value
+    }
+}
+
+export function setStyle(value) {
+    return {
+        type: "ADD_STYLE",
+        payload: value
+    }
+}
+
+export function setLyrics(value) {
+    return {
+        type: "ADD_LYRICS",
+        payload: value
     }
 }

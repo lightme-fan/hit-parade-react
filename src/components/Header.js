@@ -1,14 +1,10 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import flame from '../../svg/flame.svg'
-import cart from '../../svg/cart.svg'
 import smile from '../../svg/smile.svg'
-import heart from '../../svg/heart.svg'
-import { Context } from '../ContextProvider'
 import { connect } from 'react-redux'
 
 function Header({allSongs, cartSong}) {
-    const findSong = allSongs.filter(song => song.id)
     const favoriteClassName = allSongs.length > 0 ?
         'ri-heart-fill':
         'ri-heart-line'        

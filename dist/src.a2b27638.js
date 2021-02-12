@@ -33875,251 +33875,9 @@ if ("development" !== "production") {
 }
 },{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"svg/flame.svg":[function(require,module,exports) {
 module.exports = "/flame.05a8020b.svg";
-},{}],"svg/cart.svg":[function(require,module,exports) {
-module.exports = "/cart.ce92f439.svg";
 },{}],"svg/smile.svg":[function(require,module,exports) {
 module.exports = "/smile.2a0eba27.svg";
-},{}],"svg/heart.svg":[function(require,module,exports) {
-module.exports = "/heart.e1dfda28.svg";
-},{}],"src/songs.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var songs = [{
-  id: 1,
-  title: 'Queen of My Heart',
-  singer: 'Westlife',
-  isLiked: true,
-  upvote: 10,
-  downvote: 7,
-  price: 100,
-  style: 'Folk',
-  lyrics: ["So here we stand in our secret place\n            Where the sound of the crowd is so far away\n            You take my hand, and it fees like home\n            We both understand, it where we belong", "So do I say, do I say goodbye\n            We both have our dreams we both want to fly\n            So lets take tonight, to carry us through the lonely times\n            I'll always look back as I walk away", "Memories will last for eternity\n            And all of our tears will be lost in the rain\n            When I found my way back to your arms again\n            But until that day, you know you are", "The Queen of my heart\n            So lets take tonight, and never let go\n            While we dance we kiss, like there's no tomorrow\n            As the stars sparkle down, like a diamond ring\n            I'll treasure this moment, till we meet again\n            But no matter how far, away you may be\n            I'll just close my eyes, and your in\u2026"]
-}, {
-  id: 2,
-  title: 'Jerusalema',
-  singer: 'Master KG',
-  isLiked: false,
-  upvote: 100,
-  downvote: 20,
-  price: 100,
-  style: 'Salegy',
-  lyrics: ["O wanitwa mos, O wanitwa mos\n            Master Master KG\n            O wanitwa mos", "Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana", "Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana", "Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami", "Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami", "Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi lana", "Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi\u2026"]
-}, {
-  id: 3,
-  title: 'Take Me Home, Country Roads',
-  singer: 'John Denver',
-  isLiked: false,
-  upvote: 20,
-  downvote: 2,
-  price: 100,
-  style: 'Country',
-  lyrics: ["Almost heaven, West Virginia\n            Blue Ridge Mountains, Shenandoah River\n            Life is old there, older than the trees\n            Younger than the mountains, growin' like a breeze", "Country roads, take me home\n            To the place I belong\n            West Virginia, mountain mama\n            Take me home, country roads", "All my memories gather 'round her\n            Miner's lady, stranger to blue water\n            Dark and dusty, painted on the sky\n            Misty taste of moonshine, teardrop in my eye", "Country roads, take me home\n            To the place I belong\n            West Virginia, mountain mama\n            Take me home, country roads", "I hear her voice in the mornin' hour, she calls me\n            The radio reminds me of my home far away\n            Drivin' down the road, I get a feelin'\n            That I should've been home\u2026\n            "]
-}, {
-  id: 4,
-  title: 'Aza Itserana',
-  singer: 'Mage4',
-  isLiked: true,
-  upvote: 1000,
-  downvote: 30,
-  price: 100,
-  style: 'Rock',
-  lyrics: ["Tonga teto ianao\n            Nilaza fa nahita ilay fitia\n            Lay nirianao hatrizay ka hatrizao\n            Mba faly anie aho\n            F'angamba ho sambatra @zay ianao\n            F'ilay fitia teto amiko angamba tsy ampy", "Ny alahelo tanatiko tao\n            Nafeniko tsy ho hitanao\n            Noeferiko ilay hany hasambarako", "Fa raha sendra\n            Mandalo mamangy any aho\n            Ka maso manganohano no hitanao\n            Raha mijery anao aho tsy sahy\n            Ka tsapanao fa toa mafy izany adimpanahy\n            Aza itserana akory aho\n            Efa sambatra ianao\n            Ampy izay", "Niala teto ianao\n            Fo mangaina sisa navelanao mba ho ahy\n            Fa tsy ho ahy ianao fa hiova fitia vaovao\n            \n            Ny alahelo..............\n            "]
-}];
-var _default = songs;
-exports.default = _default;
-},{}],"src/ContextProvider.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.ContextProvider = ContextProvider;
-exports.Context = void 0;
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _songs = _interopRequireDefault(require("./songs"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var Context = _react.default.createContext();
-
-exports.Context = Context;
-
-function ContextProvider(_ref) {
-  var children = _ref.children;
-
-  var _useState = (0, _react.useState)([]),
-      _useState2 = _slicedToArray(_useState, 2),
-      allSongs = _useState2[0],
-      setSongs = _useState2[1];
-
-  var _useState3 = (0, _react.useState)([]),
-      _useState4 = _slicedToArray(_useState3, 2),
-      cartSong = _useState4[0],
-      setCart = _useState4[1];
-
-  var setSongFunc = function setSongFunc() {
-    var lsSongs = JSON.parse(localStorage.getItem('allSongs'));
-
-    if (lsSongs) {
-      setSongs(lsSongs);
-    } else {
-      setSongs(_songs.default);
-    }
-  };
-
-  function initialCart() {
-    var lsSong = JSON.parse(localStorage.getItem('cartSong'));
-
-    if (lsSong) {
-      setCart(lsSong);
-    }
-  }
-
-  (0, _react.useEffect)(function () {
-    setSongFunc();
-    initialCart();
-  }, []);
-  (0, _react.useEffect)(function () {
-    if (allSongs.length > 0) {
-      localStorage.setItem('allSongs', JSON.stringify(allSongs));
-    }
-  }, [allSongs]);
-  console.log(cartSong);
-  (0, _react.useEffect)(function () {
-    if (cartSong.length > 0) {
-      localStorage.setItem('cartSong', JSON.stringify(cartSong));
-    }
-  }, [cartSong]); // Handle Fanvorite
-
-  var handleFavoriteSong = function handleFavoriteSong(id) {
-    var newSong = allSongs.map(function (song) {
-      if (song.id === id) {
-        return _objectSpread(_objectSpread({}, song), {}, {
-          isLiked: !song.isLiked
-        });
-      }
-
-      return song;
-    });
-    setSongs(newSong);
-  }; // Handle Cart
-
-
-  var addToCart = function addToCart(song) {
-    setCart(function (prevCart) {
-      return [].concat(_toConsumableArray(prevCart), [song]);
-    });
-  };
-
-  var removeFromCart = function removeFromCart(id) {
-    setCart(function (prevItem) {
-      return prevItem.filter(function (item) {
-        return item.id !== id;
-      });
-    });
-  }; // Up and Down votes
-
-
-  var clickUpvote = function clickUpvote(id) {
-    var foundSong = allSongs.map(function (song) {
-      if (song.id === id) {
-        return _objectSpread(_objectSpread({}, song), {}, {
-          upvote: song.upvote + 1
-        });
-      }
-
-      return song;
-    });
-    setSongs(foundSong);
-  };
-
-  var clickDownVote = function clickDownVote(id) {
-    var foundSong = allSongs.map(function (song) {
-      if (song.id === id) {
-        return _objectSpread(_objectSpread({}, song), {}, {
-          downvote: song.downvote + 1
-        });
-      }
-
-      return song;
-    });
-    setSongs(foundSong);
-  }; // handling Lyrcs
-
-
-  var showLyrics = function showLyrics(id) {
-    var findSong = allSongs.filter(function (item) {
-      return item.id === id;
-    });
-    console.log(findSong);
-  }; // handling Lyrcs
-
-
-  var songStyle = function songStyle(id) {
-    var findSong = allSongs.map(function (item) {
-      if (item.id !== id) {
-        console.log(id);
-        console.log(item.id);
-      }
-
-      return item;
-    });
-    console.log(findSong);
-  };
-
-  return /*#__PURE__*/_react.default.createElement(Context.Provider, {
-    value: {
-      allSongs: allSongs,
-      setSongs: setSongs,
-      handleFavoriteSong: handleFavoriteSong,
-      cartSong: cartSong,
-      setCart: setCart,
-      addToCart: addToCart,
-      removeFromCart: removeFromCart,
-      clickUpvote: clickUpvote,
-      clickDownVote: clickDownVote,
-      showLyrics: showLyrics,
-      songStyle: songStyle
-    }
-  }, children);
-}
-},{"react":"node_modules/react/index.js","./songs":"src/songs.js"}],"node_modules/react-redux/es/components/Context.js":[function(require,module,exports) {
+},{}],"node_modules/react-redux/es/components/Context.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36497,13 +36255,7 @@ var _reactRouterDom = require("react-router-dom");
 
 var _flame = _interopRequireDefault(require("../../svg/flame.svg"));
 
-var _cart = _interopRequireDefault(require("../../svg/cart.svg"));
-
 var _smile = _interopRequireDefault(require("../../svg/smile.svg"));
-
-var _heart = _interopRequireDefault(require("../../svg/heart.svg"));
-
-var _ContextProvider = require("../ContextProvider");
 
 var _reactRedux = require("react-redux");
 
@@ -36516,9 +36268,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function Header(_ref) {
   var allSongs = _ref.allSongs,
       cartSong = _ref.cartSong;
-  var findSong = allSongs.filter(function (song) {
-    return song.id;
-  });
   var favoriteClassName = allSongs.length > 0 ? 'ri-heart-fill' : 'ri-heart-line';
   var cartClassName = cartSong.length > 0 ? "ri-shopping-cart-fill ri-fw ri-1x" : "ri-shopping-cart-line ri-fw ri-1x";
   return /*#__PURE__*/_react.default.createElement("header", {
@@ -36556,7 +36305,7 @@ function mapStateToProps(state) {
 var _default = (0, _reactRedux.connect)(mapStateToProps, null)(Header);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../../svg/flame.svg":"svg/flame.svg","../../svg/cart.svg":"svg/cart.svg","../../svg/smile.svg":"svg/smile.svg","../../svg/heart.svg":"svg/heart.svg","../ContextProvider":"src/ContextProvider.js","react-redux":"node_modules/react-redux/es/index.js"}],"src/redux/actions.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../../svg/flame.svg":"svg/flame.svg","../../svg/smile.svg":"svg/smile.svg","react-redux":"node_modules/react-redux/es/index.js"}],"src/redux/actions.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36569,8 +36318,15 @@ exports.upvoteSong = upvoteSong;
 exports.downvoteSong = downvoteSong;
 exports.styles = styles;
 exports.addNewSong = addNewSong;
+exports.handleInputChange = handleInputChange;
 exports.addToCart = addToCart;
 exports.removeFromCart = removeFromCart;
+exports.boughtCart = boughtCart;
+exports.setTitle = setTitle;
+exports.setSinger = setSinger;
+exports.setPrice = setPrice;
+exports.setStyle = setStyle;
+exports.setLyrics = setLyrics;
 
 function getSongs(song) {
   return {
@@ -36621,6 +36377,13 @@ function addNewSong(song) {
   };
 }
 
+function handleInputChange(song) {
+  return {
+    type: "HANDLE_INPUT_CHANGE",
+    payload: song
+  };
+}
+
 function addToCart(item) {
   return {
     type: "ADD_TO_CART",
@@ -36632,6 +36395,48 @@ function removeFromCart(item) {
   return {
     type: "REMOVE_FROM_CART",
     payload: item
+  };
+}
+
+function boughtCart(item) {
+  return {
+    type: "BOUGHT_CART",
+    payload: item
+  };
+}
+
+function setTitle(text) {
+  return {
+    type: "ADD_TITLE",
+    payload: text
+  };
+}
+
+function setSinger(value) {
+  return {
+    type: "ADD_SINGER",
+    payload: value
+  };
+}
+
+function setPrice(value) {
+  return {
+    type: "ADD_PRICE",
+    payload: value
+  };
+}
+
+function setStyle(value) {
+  return {
+    type: "ADD_STYLE",
+    payload: value
+  };
+}
+
+function setLyrics(value) {
+  return {
+    type: "ADD_LYRICS",
+    payload: value
   };
 }
 },{}],"src/components/Song.js":[function(require,module,exports) {
@@ -36672,18 +36477,17 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function Song(_ref) {
   var song = _ref.song,
-      handleFavoriteSong = _ref.handleFavoriteSong,
-      cartSong = _ref.cartSong,
-      addToCart = _ref.addToCart,
-      removeFromCart = _ref.removeFromCart,
-      clickUpvote = _ref.clickUpvote,
-      clickDownVote = _ref.clickDownVote,
       showLyrics = _ref.showLyrics;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       isHovered = _useState2[0],
       setHover = _useState2[1];
+
+  var cartSong = (0, _reactRedux.useSelector)(function (state) {
+    return state.cartItem;
+  });
+  var dispatch = (0, _reactRedux.useDispatch)();
 
   var handleMouseEnter = function handleMouseEnter() {
     setHover(true);
@@ -36697,14 +36501,14 @@ function Song(_ref) {
     if (song.isLiked) {
       return /*#__PURE__*/_react.default.createElement("i", {
         onClick: function onClick() {
-          return handleFavoriteSong(song.id);
+          return dispatch((0, _actions.handleFavoriteSong)(song.id));
         },
         className: "ri-heart-fill favorite"
       });
     } else {
       return /*#__PURE__*/_react.default.createElement("i", {
         onClick: function onClick() {
-          return handleFavoriteSong(song.id);
+          return dispatch((0, _actions.handleFavoriteSong)(song.id));
         },
         className: "ri-heart-line favorite"
       });
@@ -36719,14 +36523,14 @@ function Song(_ref) {
     if (inCart) {
       return /*#__PURE__*/_react.default.createElement("i", {
         onClick: function onClick() {
-          return removeFromCart(song.id);
+          return dispatch((0, _actions.removeFromCart)(song.id));
         },
         className: "ri-shopping-cart-fill ri-fw ri-1x cart"
       });
     } else {
       return /*#__PURE__*/_react.default.createElement("i", {
         onClick: function onClick() {
-          return addToCart(song);
+          return dispatch((0, _actions.addToCart)(song));
         },
         className: "ri-shopping-cart-line ri-fw ri-1x cart"
       });
@@ -36741,12 +36545,12 @@ function Song(_ref) {
   }, toggleLikedSong()), /*#__PURE__*/_react.default.createElement("h3", null, song.title, /*#__PURE__*/_react.default.createElement("br", null), " ", /*#__PURE__*/_react.default.createElement("small", null, song.singer)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("span", {
     className: "count",
     onClick: function onClick() {
-      return clickUpvote(song.id);
+      return dispatch((0, _actions.upvoteSong)(song.id));
     }
   }, "\u2191"), "  ", /*#__PURE__*/_react.default.createElement("span", null, song.upvote)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("span", {
     className: "count",
     onClick: function onClick() {
-      return clickDownVote(song.id);
+      return dispatch((0, _actions.downvoteSong)(song.id));
     }
   }, "\u2193"), "  ", /*#__PURE__*/_react.default.createElement("span", null, song.downvote)), toggleCartIcon(), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/song/".concat(song.id)
@@ -36761,22 +36565,247 @@ Song.propTypes = {
     lyrics: _propTypes.default.string
   })
 };
-var mapDispatchToState = {
-  handleFavoriteSong: _actions.handleFavoriteSong,
-  clickUpvote: _actions.upvoteSong,
-  clickDownVote: _actions.downvoteSong,
-  addToCart: _actions.addToCart,
-  removeFromCart: _actions.removeFromCart
-};
-
-var _default = (0, _reactRedux.connect)(function (state) {
-  return {
-    cartSong: state.cartItem
-  };
-}, mapDispatchToState)(Song);
-
+var _default = Song;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-redux":"node_modules/react-redux/es/index.js","../redux/actions":"src/redux/actions.js"}],"src/pages/PopularSongs.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-redux":"node_modules/react-redux/es/index.js","../redux/actions":"src/redux/actions.js"}],"src/songs.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var songs = [{
+  id: 1,
+  title: 'Queen of My Heart',
+  singer: 'Westlife',
+  isLiked: true,
+  upvote: 10,
+  downvote: 7,
+  price: 100,
+  style: 'Folk',
+  lyrics: ["So here we stand in our secret place\n            Where the sound of the crowd is so far away\n            You take my hand, and it fees like home\n            We both understand, it where we belong", "So do I say, do I say goodbye\n            We both have our dreams we both want to fly\n            So lets take tonight, to carry us through the lonely times\n            I'll always look back as I walk away", "Memories will last for eternity\n            And all of our tears will be lost in the rain\n            When I found my way back to your arms again\n            But until that day, you know you are", "The Queen of my heart\n            So lets take tonight, and never let go\n            While we dance we kiss, like there's no tomorrow\n            As the stars sparkle down, like a diamond ring\n            I'll treasure this moment, till we meet again\n            But no matter how far, away you may be\n            I'll just close my eyes, and your in\u2026"]
+}, {
+  id: 2,
+  title: 'Jerusalema',
+  singer: 'Master KG',
+  isLiked: false,
+  upvote: 100,
+  downvote: 20,
+  price: 100,
+  style: 'Salegy',
+  lyrics: ["O wanitwa mos, O wanitwa mos\n            Master Master KG\n            O wanitwa mos", "Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana", "Jerusalema ikhaya lami\n            Ngilondoloze\n            Uhambe nami\n            Zungangishiyi lana", "Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami", "Ndawo yami ayikho lana\n            Mbuso wami awukho lana\n            Ngilondoloze\n            Zuhambe nami", "Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi lana", "Ngilondoloze ngilondoloze ngilondoloze\n            Zungangishiyi\u2026"]
+}, {
+  id: 3,
+  title: 'Take Me Home, Country Roads',
+  singer: 'John Denver',
+  isLiked: false,
+  upvote: 20,
+  downvote: 2,
+  price: 100,
+  style: 'Country',
+  lyrics: ["Almost heaven, West Virginia\n            Blue Ridge Mountains, Shenandoah River\n            Life is old there, older than the trees\n            Younger than the mountains, growin' like a breeze", "Country roads, take me home\n            To the place I belong\n            West Virginia, mountain mama\n            Take me home, country roads", "All my memories gather 'round her\n            Miner's lady, stranger to blue water\n            Dark and dusty, painted on the sky\n            Misty taste of moonshine, teardrop in my eye", "Country roads, take me home\n            To the place I belong\n            West Virginia, mountain mama\n            Take me home, country roads", "I hear her voice in the mornin' hour, she calls me\n            The radio reminds me of my home far away\n            Drivin' down the road, I get a feelin'\n            That I should've been home\u2026\n            "]
+}, {
+  id: 4,
+  title: 'Aza Itserana',
+  singer: 'Mage4',
+  isLiked: true,
+  upvote: 1000,
+  downvote: 30,
+  price: 100,
+  style: 'Rock',
+  lyrics: ["Tonga teto ianao\n            Nilaza fa nahita ilay fitia\n            Lay nirianao hatrizay ka hatrizao\n            Mba faly anie aho\n            F'angamba ho sambatra @zay ianao\n            F'ilay fitia teto amiko angamba tsy ampy", "Ny alahelo tanatiko tao\n            Nafeniko tsy ho hitanao\n            Noeferiko ilay hany hasambarako", "Fa raha sendra\n            Mandalo mamangy any aho\n            Ka maso manganohano no hitanao\n            Raha mijery anao aho tsy sahy\n            Ka tsapanao fa toa mafy izany adimpanahy\n            Aza itserana akory aho\n            Efa sambatra ianao\n            Ampy izay", "Niala teto ianao\n            Fo mangaina sisa navelanao mba ho ahy\n            Fa tsy ho ahy ianao fa hiova fitia vaovao\n            \n            Ny alahelo..............\n            "]
+}];
+var _default = songs;
+exports.default = _default;
+},{}],"src/ContextProvider.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ContextProvider = ContextProvider;
+exports.Context = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _songs = _interopRequireDefault(require("./songs"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Context = _react.default.createContext();
+
+exports.Context = Context;
+
+function ContextProvider(_ref) {
+  var children = _ref.children;
+
+  var _useState = (0, _react.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      allSongs = _useState2[0],
+      setSongs = _useState2[1];
+
+  var _useState3 = (0, _react.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      cartSong = _useState4[0],
+      setCart = _useState4[1];
+
+  var setSongFunc = function setSongFunc() {
+    var lsSongs = JSON.parse(localStorage.getItem('allSongs'));
+
+    if (lsSongs) {
+      setSongs(lsSongs);
+    } else {
+      setSongs(_songs.default);
+    }
+  };
+
+  function initialCart() {
+    var lsSong = JSON.parse(localStorage.getItem('cartSong'));
+
+    if (lsSong) {
+      setCart(lsSong);
+    }
+  }
+
+  (0, _react.useEffect)(function () {
+    setSongFunc();
+    initialCart();
+  }, []);
+  (0, _react.useEffect)(function () {
+    if (allSongs.length > 0) {
+      localStorage.setItem('allSongs', JSON.stringify(allSongs));
+    }
+  }, [allSongs]);
+  console.log(cartSong);
+  (0, _react.useEffect)(function () {
+    if (cartSong.length > 0) {
+      localStorage.setItem('cartSong', JSON.stringify(cartSong));
+    }
+  }, [cartSong]); // Handle Fanvorite
+
+  var handleFavoriteSong = function handleFavoriteSong(id) {
+    var newSong = allSongs.map(function (song) {
+      if (song.id === id) {
+        return _objectSpread(_objectSpread({}, song), {}, {
+          isLiked: !song.isLiked
+        });
+      }
+
+      return song;
+    });
+    setSongs(newSong);
+  }; // Handle Cart
+
+
+  var addToCart = function addToCart(song) {
+    setCart(function (prevCart) {
+      return [].concat(_toConsumableArray(prevCart), [song]);
+    });
+  };
+
+  var removeFromCart = function removeFromCart(id) {
+    setCart(function (prevItem) {
+      return prevItem.filter(function (item) {
+        return item.id !== id;
+      });
+    });
+  }; // Up and Down votes
+
+
+  var clickUpvote = function clickUpvote(id) {
+    var foundSong = allSongs.map(function (song) {
+      if (song.id === id) {
+        return _objectSpread(_objectSpread({}, song), {}, {
+          upvote: song.upvote + 1
+        });
+      }
+
+      return song;
+    });
+    setSongs(foundSong);
+  };
+
+  var clickDownVote = function clickDownVote(id) {
+    var foundSong = allSongs.map(function (song) {
+      if (song.id === id) {
+        return _objectSpread(_objectSpread({}, song), {}, {
+          downvote: song.downvote + 1
+        });
+      }
+
+      return song;
+    });
+    setSongs(foundSong);
+  }; // handling Lyrcs
+
+
+  var showLyrics = function showLyrics(id) {
+    var findSong = allSongs.filter(function (item) {
+      return item.id === id;
+    });
+    console.log(findSong);
+  }; // handling Lyrcs
+
+
+  var songStyle = function songStyle(id) {
+    var findSong = allSongs.map(function (item) {
+      if (item.id !== id) {
+        console.log(id);
+        console.log(item.id);
+      }
+
+      return item;
+    });
+    console.log(findSong);
+  };
+
+  return /*#__PURE__*/_react.default.createElement(Context.Provider, {
+    value: {
+      allSongs: allSongs,
+      setSongs: setSongs,
+      handleFavoriteSong: handleFavoriteSong,
+      cartSong: cartSong,
+      setCart: setCart,
+      addToCart: addToCart,
+      removeFromCart: removeFromCart,
+      clickUpvote: clickUpvote,
+      clickDownVote: clickDownVote,
+      showLyrics: showLyrics,
+      songStyle: songStyle
+    }
+  }, children);
+}
+},{"react":"node_modules/react/index.js","./songs":"src/songs.js"}],"src/pages/PopularSongs.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36800,6 +36829,8 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function PopularSongs(_ref) {
   var allSongs = _ref.allSongs;
   var mapped = allSongs.sort(function (a, b) {
@@ -36807,10 +36838,10 @@ function PopularSongs(_ref) {
     var sortDownvotes = a.downvote - b.downvote;
     return sortDownvotes - sortUpvotes;
   }).map(function (song) {
-    return /*#__PURE__*/_react.default.createElement(_Song.default, {
+    return /*#__PURE__*/_react.default.createElement(_Song.default, _extends({
       key: song.title,
       song: song
-    });
+    }, song));
   });
   return /*#__PURE__*/_react.default.createElement("ul", {
     className: "song"
@@ -36820,7 +36851,7 @@ function PopularSongs(_ref) {
 var mapStateToProps = function mapStateToProps(state) {
   var allSongs = state.allSongs;
   return {
-    allSongs: state.allSongs
+    allSongs: allSongs
   };
 };
 
@@ -36878,60 +36909,39 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactRedux = require("react-redux");
 
-var _ContextProvider = require("../ContextProvider");
+var _actions = require("../redux/actions");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function Add(_ref) {
-  var allSongs = _ref.allSongs;
-
-  var _useState = (0, _react.useState)({
-    title: '',
-    singer: '',
-    style: '',
-    isLiked: false,
-    upvote: 0,
-    downvote: 0,
-    price: 1000
-  }),
-      _useState2 = _slicedToArray(_useState, 2),
-      newSong = _useState2[0],
-      setNewSong = _useState2[1];
-
-  function handleInput(e) {
-    var _e$target = e.target,
-        name = _e$target.name,
-        value = _e$target.value;
-    setNewSong(function (prev) {
-      var _objectSpread2;
-
-      return _objectSpread(_objectSpread({}, prev), {}, (_objectSpread2 = {}, _defineProperty(_objectSpread2, name, value), _defineProperty(_objectSpread2, "id", new Date() + value), _objectSpread2));
-    });
-  }
+  var addNewSong = _ref.addNewSong,
+      setTitle = _ref.setTitle,
+      setSinger = _ref.setSinger,
+      setPrice = _ref.setPrice,
+      setStyle = _ref.setStyle,
+      setLyrics = _ref.setLyrics,
+      title = _ref.title,
+      singer = _ref.singer,
+      price = _ref.price,
+      style = _ref.style,
+      lyrics = _ref.lyrics;
 
   function handleSubmit(e) {
     e.preventDefault();
-    e.target.reset();
+    var newSong = {
+      title: title,
+      singer: singer,
+      style: style,
+      isLiked: false,
+      id: Date.now(),
+      upvote: 0,
+      downvote: 0,
+      price: price,
+      lyrics: lyrics
+    };
+    addNewSong(newSong);
   }
 
   return /*#__PURE__*/_react.default.createElement("form", {
@@ -36944,23 +36954,32 @@ function Add(_ref) {
   }, /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
     name: "title",
-    placeholder: "Title",
-    onChange: handleInput,
-    required: true
+    value: title,
+    onChange: function onChange(e) {
+      return setTitle(e.target.value);
+    },
+    placeholder: "Title"
   }), /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
     name: "singer",
-    placeholder: "Artist",
-    onChange: handleInput,
-    required: true
+    value: singer,
+    onChange: function onChange(e) {
+      return setSinger(e.target.value);
+    },
+    placeholder: "Artist"
   }), /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
     name: "price",
-    placeholder: "Price",
-    onChange: handleInput,
-    required: true
+    value: price,
+    onChange: function onChange(e) {
+      return setPrice(e.target.value);
+    },
+    placeholder: "Price"
   }), /*#__PURE__*/_react.default.createElement("select", {
-    onChange: handleInput,
+    value: style,
+    onChange: function onChange(e) {
+      return setStyle(e.target.value);
+    },
     name: "style"
   }, /*#__PURE__*/_react.default.createElement("option", {
     value: "salegy"
@@ -36975,19 +36994,39 @@ function Add(_ref) {
     row: "5",
     name: "lyrics",
     placeholder: "Lyrics",
-    onChange: handleInput,
-    required: true
+    value: lyrics,
+    onChange: function onChange(e) {
+      return setLyrics(e.target.value);
+    }
   }), /*#__PURE__*/_react.default.createElement("button", null, "Add"))));
 }
 
-var _default = (0, _reactRedux.connect)(function (state) {
+function mapStateToProps(state) {
+  var newSong = state.newSong;
+  console.log(state.allSongs);
   return {
+    title: state.newSong.title,
+    singer: state.newSong.singer,
+    price: state.newSong.price,
+    style: state.newSong.style,
+    lyrics: state.newSong.lyrics,
     allSongs: state.allSongs
   };
-}, null)(Add);
+}
+
+var mapDispatchToProps = {
+  addNewSong: _actions.addNewSong,
+  setTitle: _actions.setTitle,
+  setSinger: _actions.setSinger,
+  setPrice: _actions.setPrice,
+  setStyle: _actions.setStyle,
+  setLyrics: _actions.setLyrics
+};
+
+var _default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Add);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../ContextProvider":"src/ContextProvider.js"}],"src/customHooks/useHover.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../redux/actions":"src/redux/actions.js"}],"src/customHooks/useHover.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37053,9 +37092,13 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _reactRedux = require("react-redux");
+
 var _ContextProvider = require("../ContextProvider");
 
 var _useHover3 = _interopRequireDefault(require("../customHooks/useHover"));
+
+var _actions = require("../redux/actions");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37086,9 +37129,7 @@ function CartPage(_ref) {
       isHovered = _useHover2[0],
       ref = _useHover2[1];
 
-  var _useContext = (0, _react.useContext)(_ContextProvider.Context),
-      removeFromCart = _useContext.removeFromCart;
-
+  var dispatch = (0, _reactRedux.useDispatch)();
   var deleteClass = isHovered ? 'ri-delete-bin-fill' : 'ri-delete-bin-line';
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "cart--card"
@@ -37096,14 +37137,14 @@ function CartPage(_ref) {
     className: "".concat(deleteClass, " delete--song"),
     ref: ref,
     onClick: function onClick() {
-      return removeFromCart(id);
+      return dispatch((0, _actions.removeFromCart)(id));
     }
   }), /*#__PURE__*/_react.default.createElement("h3", null, title, /*#__PURE__*/_react.default.createElement("br", null), " ", /*#__PURE__*/_react.default.createElement("span", null, singer)), /*#__PURE__*/_react.default.createElement("p", null, "Price: ", price, " Ar"));
 }
 
 var _default = CartPage;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../ContextProvider":"src/ContextProvider.js","../customHooks/useHover":"src/customHooks/useHover.js"}],"src/pages/Cart.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../ContextProvider":"src/ContextProvider.js","../customHooks/useHover":"src/customHooks/useHover.js","../redux/actions":"src/redux/actions.js"}],"src/pages/Cart.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37113,11 +37154,9 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _ContextProvider = require("../ContextProvider");
+var _reactRedux = require("react-redux");
 
 var _CartPage = _interopRequireDefault(require("../components/CartPage"));
-
-var _reactRedux = require("react-redux");
 
 var _actions = require("../redux/actions");
 
@@ -37143,7 +37182,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function Cart(_ref) {
   var cartSong = _ref.cartSong,
-      setCart = _ref.setCart;
+      setCart = _ref.setCart,
+      boughtCart = _ref.boughtCart;
 
   var _useState = (0, _react.useState)('Buy'),
       _useState2 = _slicedToArray(_useState, 2),
@@ -37160,7 +37200,10 @@ function Cart(_ref) {
     setTimeout(function () {
       setButtonText('Buy');
       alert('Thanks for buying. Please pay your purchases!');
-      emptyCart();
+      setTimeout(function () {
+        setButtonText('Thanks for Buying');
+        boughtCart();
+      }, 1500);
     }, 3000);
   }
 
@@ -37191,10 +37234,6 @@ function Cart(_ref) {
     }
   }
 
-  function emptyCart() {
-    setCart([]);
-  }
-
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, cartSong.map(function (song) {
     return /*#__PURE__*/_react.default.createElement(_CartPage.default, _extends({
       key: song.title
@@ -37205,18 +37244,18 @@ function Cart(_ref) {
 }
 
 function mapStateToProps(state) {
-  console.log(state.allSongs);
   return {
     cartSong: state.cartItem
   };
 }
 
 var _default = (0, _reactRedux.connect)(mapStateToProps, {
-  setCart: _actions.addToCart
+  setCart: _actions.addToCart,
+  boughtCart: _actions.boughtCart
 })(Cart);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../ContextProvider":"src/ContextProvider.js","../components/CartPage":"src/components/CartPage.js","react-redux":"node_modules/react-redux/es/index.js","../redux/actions":"src/redux/actions.js"}],"src/pages/Lyrics.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../components/CartPage":"src/components/CartPage.js","../redux/actions":"src/redux/actions.js"}],"src/pages/Lyrics.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37408,11 +37447,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.songReducer = songReducer;
+exports.newSongReducer = newSongReducer;
 exports.cartReducer = cartReducer;
-exports.favoriteReducer = favoriteReducer;
-exports.songStyleReducer = songStyleReducer;
-exports.addSongReducer = addSongReducer;
-exports.handleCartReducer = handleCartReducer;
 
 var _state = _interopRequireDefault(require("../state"));
 
@@ -37438,51 +37474,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var allSongs = _state.default.allSongs,
     cartItem = _state.default.cartItem;
+var newSong = {
+  title: "",
+  singer: "",
+  style: "",
+  price: "",
+  lyrics: ""
+};
 
 function songReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : allSongs;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
     case "GET_SONGS":
       return action.payload;
-
-    default:
-      return state;
-  }
-}
-
-function cartReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    case "GET_INITIAL_CART":
-      return action.payload;
-
-    default:
-      return state;
-  }
-}
-
-function favoriteReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : allSongs;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    case "HANDLE_FAVORITE_SONG":
-      {
-        var newSong = state.map(function (song) {
-          if (song.id === action.payload) {
-            return _objectSpread(_objectSpread({}, song), {}, {
-              isLiked: !song.isLiked
-            });
-          }
-
-          return song;
-        });
-        return newSong;
-      }
 
     case "UPVOTE_SONG":
       {
@@ -37498,10 +37504,26 @@ function favoriteReducer() {
         return foundSong;
       }
 
+    case "HANDLE_FAVORITE_SONG":
+      {
+        var _newSong = state.map(function (song) {
+          if (song.id === action.payload) {
+            return _objectSpread(_objectSpread({}, song), {}, {
+              isLiked: !song.isLiked
+            });
+          }
+
+          return song;
+        });
+
+        return _newSong;
+      }
+
     case "DOWNVOTE_SONG":
       {
         var _foundSong = state.map(function (song) {
           if (song.id === action.payload) {
+            console.log(song.downvote + 1);
             return _objectSpread(_objectSpread({}, song), {}, {
               downvote: song.downvote + 1
             });
@@ -37513,19 +37535,44 @@ function favoriteReducer() {
         return _foundSong;
       }
 
+    case "ADD_NEW_SONG":
+      {
+        return [].concat(_toConsumableArray(state), [action.payload]);
+      }
+
     default:
       return state;
   }
 }
 
-function songStyleReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : allSongs;
+function newSongReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : newSong;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case "SONG_STYLE":
-      return state.filter(function (item) {
-        return item.id === action.payload;
+    case "ADD_TITLE":
+      return _objectSpread(_objectSpread({}, state), {}, {
+        title: action.payload
+      });
+
+    case "ADD_SINGER":
+      return _objectSpread(_objectSpread({}, state), {}, {
+        singer: action.payload
+      });
+
+    case "ADD_SYTLE":
+      return _objectSpread(_objectSpread({}, state), {}, {
+        style: action.payload
+      });
+
+    case "ADD_PRICE":
+      return _objectSpread(_objectSpread({}, state), {}, {
+        price: action.payload
+      });
+
+    case "ADD_LYRICS":
+      return _objectSpread(_objectSpread({}, state), {}, {
+        lyrics: action.payload
       });
 
     default:
@@ -37533,31 +37580,29 @@ function songStyleReducer() {
   }
 }
 
-function addSongReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : allSongs;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    case "ADD_NEW_SONG":
-      return [].concat(_toConsumableArray(state), [action.payload]);
-
-    default:
-      return state;
-  }
-}
-
-function handleCartReducer() {
+function cartReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : cartItem;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
+    case "GET_INITIAL_CART":
+      return action.payload;
+
     case "ADD_TO_CART":
       return [].concat(_toConsumableArray(state), [action.payload]);
 
     case "REMOVE_FROM_CART":
-      return state.filter(function (item) {
-        return item.id !== action.payload;
-      });
+      {
+        var removeItem = state.filter(function (item) {
+          return item.id !== action.payload;
+        });
+        return removeItem;
+      }
+
+    case "BOUGHT_CART":
+      {
+        return [];
+      }
 
     default:
       return state;
@@ -37578,9 +37623,7 @@ var _reducers = require("./reducers");
 var rootReducer = (0, _redux.combineReducers)({
   allSongs: _reducers.songReducer,
   cartItem: _reducers.cartReducer,
-  favorite: _reducers.favoriteReducer,
-  add: _reducers.addSongReducer,
-  handleCart: _reducers.handleCartReducer
+  newSong: _reducers.newSongReducer
 });
 exports.rootReducer = rootReducer;
 },{"redux":"node_modules/redux/es/redux.js","./reducers":"src/redux/reducers.js"}],"src/store/store.js":[function(require,module,exports) {
@@ -37600,9 +37643,6 @@ var _state = _interopRequireDefault(require("../state"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var store = (0, _redux.createStore)(_redux2.rootReducer, _state.default);
-store.subscribe(function () {
-  store.getState();
-});
 var _default = store;
 exports.default = _default;
 },{"redux":"node_modules/redux/es/redux.js","../redux":"src/redux/index.js","../state":"src/state.js"}],"src/index.js":[function(require,module,exports) {
@@ -37655,7 +37695,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49700" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

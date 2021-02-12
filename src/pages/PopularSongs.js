@@ -13,7 +13,7 @@ function PopularSongs({allSongs}) {
         return sortDownvotes - sortUpvotes
     })
     .map(song => {
-        return <Song key={song.title} song={song} />
+        return <Song key={song.title} song={song} {...song}/>
     })
 
     return (
@@ -26,7 +26,7 @@ function PopularSongs({allSongs}) {
 const mapStateToProps = (state) => {
     const { allSongs } = state
     return {
-        allSongs: state.allSongs
+        allSongs: allSongs
     }
 }
 

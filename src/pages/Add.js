@@ -1,32 +1,42 @@
 import React, { useContext, useState } from 'react'
-import { connect } from 'react-redux';
-import { Context } from '../ContextProvider'
+import { connect, useSelector } from 'react-redux';
+import { 
+    addNewSong, 
+    setTitle,
+    setSinger,
+    setPrice,
+    setStyle,
+    setLyrics,
+ } from '../redux/actions';
 
-function Add({allSongs}) {
-    const [newSong, setNewSong] = useState({
-        title: '',
-        singer: '',
-        style: '',
-        isLiked: false,
-        upvote: 0,
-        downvote: 0,
-        price: 1000,
-    })
-
-    function handleInput(e) {
-        const { name, value } = e.target;
-        setNewSong((prev) => {
-            return {
-                ...prev,
-                [name]: value,
-                id: new Date()+value,
-            };
-        })
-    }
+function Add({
+    addNewSong,
+    setTitle,
+    setSinger,
+    setPrice,
+    setStyle,
+    setLyrics,
+    title,
+    singer,
+    price,
+    style,
+    lyrics,
+}) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        e.target.reset();
+        const newSong = {
+            title: title,
+            singer: singer,
+            style: style,
+            isLiked: false,
+            id: Date.now(),
+            upvote: 0,
+            downvote: 0,
+            price: price,
+            lyrics: lyrics
+        }
+        addNewSong(newSong)
     }
 
     return (
@@ -34,11 +44,11 @@ function Add({allSongs}) {
             <h2>Add a new Song</h2>
             <div className='add--song'>
                 <fieldset className='fieldset'>
-                    <input type='text' name='title' placeholder='Title' onChange={handleInput} required/>
-                    <input type='text' name='singer' placeholder='Artist' onChange={handleInput} required/>
-                    <input type='text' name='price' placeholder='Price' onChange={handleInput} required/>
+                    <input type='text' name='title' value={title} onChange={(e) => setTitle(e.target.value)} placeholder='Title'/>
+                    <input type='text' name='singer' value={singer} onChange={(e) => setSinger(e.target.value)} placeholder='Artist'/>
+                    <input type='text' name='price' value={price} onChange={(e) => setPrice(e.target.value)} placeholder='Price' />
                     <select
-                        onChange={handleInput}
+                        value={style} onChange={(e) => setStyle(e.target.value)}
                         name='style'
                     >
                         <option value="salegy">Salegy</option>
@@ -46,7 +56,7 @@ function Add({allSongs}) {
                         <option value="rap">Rap</option>
                         <option value="reggea">Reggea</option>
                     </select>
-                    <textarea type='text' row='5' name='lyrics' placeholder='Lyrics' onChange={handleInput} required/>
+                    <textarea type='text' row='5' name='lyrics' placeholder='Lyrics' value={lyrics} onChange={(e) => setLyrics(e.target.value)} />
                     <button>Add</button>
                 </fieldset>
             </div>
@@ -54,4 +64,26 @@ function Add({allSongs}) {
     )
 }
 
-export default connect((state) => ({allSongs: state.allSongs}), null)(Add)
+function mapStateToProps(state) {
+    const {newSong} = state
+    console.log(state.allSongs);
+    return {
+        title: state.newSong.title,
+        singer: state.newSong.singer,
+        price: state.newSong.price,
+        style: state.newSong.style,
+        lyrics: state.newSong.lyrics,
+        allSongs: state.allSongs
+    }
+}
+
+const mapDispatchToProps = {
+    addNewSong,
+    setTitle,
+    setSinger,
+    setPrice,
+    setStyle,
+    setLyrics
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Add)

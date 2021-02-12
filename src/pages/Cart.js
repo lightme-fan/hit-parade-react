@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { Context } from '../ContextProvider'
-import CartPage from '../components/CartPage'
 import { connect } from 'react-redux'
-import { addToCart } from '../redux/actions'
 
-function Cart({cartSong, setCart}) {
+import CartPage from '../components/CartPage'
+import { addToCart, boughtCart } from '../redux/actions'
+
+function Cart({cartSong, setCart, boughtCart}) {
     const [buyBtnText, setButtonText] = useState('Buy')
     const [ total, setTotal ] = useState(0)
 
@@ -13,7 +13,10 @@ function Cart({cartSong, setCart}) {
 		setTimeout(() => {
             setButtonText('Buy')
             alert('Thanks for buying. Please pay your purchases!')
-			emptyCart()
+            setTimeout(() => {
+                setButtonText('Thanks for Buying')
+                boughtCart()
+            }, 1500)
 		}, 3000);
     }
     
@@ -45,10 +48,6 @@ function Cart({cartSong, setCart}) {
 		}
     }
 
-    function emptyCart() {
-		setCart([])
-    }
-
     return (
         <>
             {cartSong.map(song => 
@@ -62,10 +61,9 @@ function Cart({cartSong, setCart}) {
 }
 
 function mapStateToProps(state) {
-    console.log(state.allSongs);
     return {
         cartSong: state.cartItem
     }
 }
 
-export default connect(mapStateToProps, {setCart: addToCart})(Cart)
+export default connect(mapStateToProps, {setCart: addToCart, boughtCart: boughtCart})(Cart)
