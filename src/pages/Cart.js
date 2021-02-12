@@ -7,19 +7,22 @@ import { addToCart, boughtCart } from '../redux/actions'
 function Cart({cartSong, setCart, boughtCart}) {
     const [buyBtnText, setButtonText] = useState('Buy')
     const [ total, setTotal ] = useState(0)
+    const [ isBought, setIsBought ] = useState(false)
 
     function  buying() {
 		setButtonText('Buying...')
 		setTimeout(() => {
             setButtonText('Buy')
-            alert('Thanks for buying. Please pay your purchases!')
+            alert('Thanks for buying. Please pay your purchases! 👍')
             setTimeout(() => {
-                setButtonText('Thanks for Buying')
+                setButtonText('Bought cart')
+                alert('👍 Enjoy your listening! 👍')
                 boughtCart()
+                setIsBought(!isBought)
             }, 1500)
 		}, 3000);
     }
-    
+     
     useEffect(() => {
         const newTotal = cartSong.reduce((total, song) => {
             total += song.price;
@@ -34,7 +37,7 @@ function Cart({cartSong, setCart, boughtCart}) {
             return total
         }, 0)
     }
-    
+
     function showButtonButton() {		
 		if(cartSong.length >  0) {
 			return (
@@ -44,7 +47,13 @@ function Cart({cartSong, setCart, boughtCart}) {
                 </>
             )
 		} else {
-			return <p className='no-song'>You have no song to buy</p>
+			return (
+                <>{
+                    !isBought ? 
+                    <p className='no-song'>You have no song to buy</p> : 
+                    <p className='no-song'>You have just bought carts, thank you! Please buy more!</p>
+                }</>
+            )
 		}
     }
 
