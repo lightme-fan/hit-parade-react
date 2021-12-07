@@ -1,6 +1,7 @@
 # Hit Parade in React
 
-## Demo
+- Demo: [https://lightme-fan-hit-parade.netlify.app/](https://lightme-fan-hit-parade.netlify.app/)
+- Github: [https://github.com/lightme-fan/hit-parade-react/](https://github.com/lightme-fan/hit-parade-react)
 
 ## Build
 
