@@ -1,5 +1,7 @@
 # Hit Parade in React
 
+![hit-parade-song](https://user-images.githubusercontent.com/60210180/145029936-c2dee9f7-4ef8-43ac-9738-5974c74df70c.png)
+
 - Demo: [https://lightme-fan-hit-parade.netlify.app/](https://lightme-fan-hit-parade.netlify.app/)
 - Github: [https://github.com/lightme-fan/hit-parade-react/](https://github.com/lightme-fan/hit-parade-react)
 
