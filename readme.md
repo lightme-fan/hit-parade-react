@@ -13,11 +13,11 @@
 
 ## Features
 
-- List of songs (Home page)
-- Song types
-- Adding new songs
-- Like a song
-- Upvote and downvote a song
+- List of songs (Home page).
+- Song types.
+- Adding new songs.
+- Like a song.
+- Upvote and downvote a song.
 - Buy a song.
 
 ## Getting started
